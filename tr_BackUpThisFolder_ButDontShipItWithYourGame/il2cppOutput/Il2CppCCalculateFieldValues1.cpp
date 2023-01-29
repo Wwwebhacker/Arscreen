@@ -16121,8 +16121,10 @@ struct ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A  : public MonoBehaviou
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___objectToPlace_5;
 	// UnityEngine.XR.ARFoundation.ARRaycastManager ArCursor::raycastManager
 	ARRaycastManager_tD9459374F0F5BD9E2E4A8A1C665E7F33F9C2EE44* ___raycastManager_6;
-	// UnityEngine.GameObject ArCursor::objectUnderCursor
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___objectUnderCursor_7;
+	// UnityEngine.Collider ArCursor::colliderUnderCursor
+	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___colliderUnderCursor_7;
+	// UnityEngine.Texture2D ArCursor::originalTexture
+	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___originalTexture_8;
 };
 
 // BWEffect
@@ -27754,9 +27756,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3969[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3970[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3974[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3974[5] = 
 {
-	static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___cursorChildObject_4)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___objectToPlace_5)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___raycastManager_6)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___objectUnderCursor_7)),};
+	static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___cursorChildObject_4)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___objectToPlace_5)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___raycastManager_6)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___colliderUnderCursor_7)),static_cast<int32_t>(offsetof(ArCursor_t76F1BF1F32E9D96B713902440B0132AC7A9B1A2A, ___originalTexture_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3975[6] = 
 {
 	static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_AnchorPrefab_4)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED_StaticFields, ___s_Hits_5)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_AnchorPoints_6)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_RaycastManager_7)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_AnchorManager_8)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_PlaneManager_9)),};
