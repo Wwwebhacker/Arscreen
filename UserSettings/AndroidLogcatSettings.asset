@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "ef1f4a34",
+    "m_SelectedDeviceId": "c508d88a",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "c508d88a",
+        "name": "com.DefaultCompany.ARFOUND",
+        "processId": 23451,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -12,6 +12,42 @@
             "deviceId": "ef1f4a34",
             "name": "com.android.launcher",
             "processId": 3769,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.qqlabs.minimalistlauncher",
+            "processId": 6168,
+            "exited": true
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 16730,
+            "exited": true
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.qqlabs.minimalistlauncher",
+            "processId": 17212,
+            "exited": true
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 19088,
+            "exited": true
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.qqlabs.minimalistlauncher",
+            "processId": 19443,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 23451,
             "exited": false
         }
     ],

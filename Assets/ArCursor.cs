@@ -1,158 +1,68 @@
-using System.Collections;
 using System.Collections.Generic;
-
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class ArCursor : MonoBehaviour
 {
-    public GameObject cursorChildObject;
-    public GameObject objectToPlace;
+
+    private CoreController _app;
     public ARRaycastManager raycastManager;
-    private Collider colliderUnderCursor = null;
-    public Texture2D originalTexture;
-    // Start is called before the first frame update
-    void Start()
+    public RaycastHit LastHitInfo { private set; get; }
+
+    public void Start()
     {
-        cursorChildObject.SetActive(true);
+        _app = GetComponent<CoreController>();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    /// <summary>
+    /// Raycast in 2 steps:
+    /// <list type="number">
+    /// <item>Looks for Window instance.</item>
+    /// <item>Looks for the AR plane.</item>
+    /// </list>
+    /// If Window GameObject was found then following would be set:
+    /// <list type="bullet">
+    /// <item>ActiveWindow property of CoreController to top GameObject of Window instance.</item>
+    /// <item>LastHitInfo property of ArCursor which provides more info about Raycast hit.</item>
+    /// </list>
+    /// If Window was not found but Ar plane was then following would be set:
+    /// <list type="bullet">
+    /// <item>ActiveWindow property of CoreController to <b>null</b>.</item>
+    /// </list>
+    /// In both cases position and rotation of cursor will be updated.
+    /// </summary>
+    /// <returns>True if Window Object of AR plane was hit.</returns>
+    public bool RaycastCursor()
     {
-        UpdateCursor();
-        checkInput();
-    }
-
-
-    void checkInput()
-    {
-        if (colliderUnderCursor)
+        // check for window hit
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, 
+                out var hit, 5.0f))
         {
-            Debug.Log($"objectUnderCursor: {colliderUnderCursor}");
-
-            if (colliderUnderCursor.gameObject.name == "Bar")
+            LastHitInfo = hit;
+            if (Window.IsPartOfWindow(LastHitInfo.collider.gameObject, out var window))
             {
-                var screen = colliderUnderCursor.gameObject.transform.parent;
-                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Stationary)
-                {
-
-                    var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
-                    var p = colliderUnderCursor.gameObject.transform.position - screen.position;
-
-                    screen.transform.position = newPos - p;
-                    screen.transform.rotation = Camera.main.transform.rotation;
-                }
-                return;
-            }
-            
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Stationary)
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit))
-                {
-                    Renderer rend = hit.transform.GetComponent<Renderer>();
-
-                    MeshCollider meshCollider = hit.collider as MeshCollider;
-                    Debug.Log(meshCollider);
-
-                    if (rend == null || rend.sharedMaterial == null || rend.sharedMaterial.mainTexture == null || meshCollider == null)
-                        return;
-
-                    Texture2D tex = rend.material.mainTexture as Texture2D;
-                    Vector2 pixelUV = hit.textureCoord;
-                    pixelUV.x *= tex.width;
-                    pixelUV.y *= tex.height;
-
-                    tex.SetPixel((int)pixelUV.x, (int)pixelUV.y, Color.red);
-                    tex.SetPixel((int)pixelUV.x, (int)pixelUV.y + 1, Color.red);
-                    tex.SetPixel((int)pixelUV.x, (int)pixelUV.y - 1, Color.red);
-                    tex.SetPixel((int)pixelUV.x + 1, (int)pixelUV.y, Color.red);
-                    tex.SetPixel((int)pixelUV.x - 1, (int)pixelUV.y, Color.red);
-
-                    tex.Apply();
-                }
-            }
-
-        }
-        else
-        {
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-
-                var objectPos = new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z);
-                var obj = GameObject.Instantiate(objectToPlace, objectPos, transform.rotation);
-                obj = obj.transform.GetChild(1).gameObject;
-                var renderer = obj.GetComponent<Renderer>();
-                Texture2D copyTexture = new Texture2D(originalTexture.width, originalTexture.height);
-                copyTexture.SetPixels(originalTexture.GetPixels());
-                copyTexture.Apply();
-                renderer.material.EnableKeyword("_NORMALMAP");
-                renderer.material.SetTexture("_MainTex", copyTexture);
-
-
-            }
-        }
-
-
-
-
-    }
-
-    void UpdateCursor()
-    {
-
-        if (updateScreenHit())
-        {
-            return;
-        }
-
-        updatePlaneHit();
-
-
-    }
-
-    bool colliderIsScreen(Collider collider)
-    {
-        if (collider.gameObject.transform.parent)
-        {
-            if (collider.gameObject.transform.parent.name == "Screen(Clone)")
-            {
+                transform.position = LastHitInfo.point + (LastHitInfo.normal * 0.001f);
+                transform.rotation = Quaternion.LookRotation(LastHitInfo.normal);
+                transform.Rotate(new Vector3(-90, 0, 0));
+                _app.ActiveWindow = window;
                 return true;
             }
         }
-        return false;
-    }
-
-    bool updateScreenHit()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 5.0f))
-        {
-            if (colliderIsScreen(hit.collider))
-            {
-                colliderUnderCursor = hit.collider;
-                transform.position = hit.point + (hit.normal * 0.001f);
-                transform.rotation = Quaternion.LookRotation(hit.normal);
-                transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x - 90, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-
-                return true;
-            }
-        }
-        colliderUnderCursor = null;
-        return false;
-    }
-
-    void updatePlaneHit()
-    {
-        Vector2 screenPosition = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
-        List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        raycastManager.Raycast(screenPosition, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
-
+        
+        _app.ActiveWindow = null;
+        // check for plane hit
+        Vector2 centerOfScreen = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
+        var hits = new List<ARRaycastHit>();
+        raycastManager.Raycast(centerOfScreen, hits, TrackableType.Planes);
         if (hits.Count > 0)
         {
             transform.position = hits[0].pose.position;
             transform.rotation = hits[0].pose.rotation;
+            return true;
         }
+        return false;
+
     }
 }
