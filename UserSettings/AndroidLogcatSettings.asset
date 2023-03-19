@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "c508d88a",
         "name": "com.DefaultCompany.ARFOUND",
-        "processId": 23451,
+        "processId": 22342,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -16,24 +16,6 @@
         },
         {
             "deviceId": "c508d88a",
-            "name": "com.qqlabs.minimalistlauncher",
-            "processId": 6168,
-            "exited": true
-        },
-        {
-            "deviceId": "c508d88a",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 16730,
-            "exited": true
-        },
-        {
-            "deviceId": "c508d88a",
-            "name": "com.qqlabs.minimalistlauncher",
-            "processId": 17212,
-            "exited": true
-        },
-        {
-            "deviceId": "c508d88a",
             "name": "com.DefaultCompany.ARFOUND",
             "processId": 19088,
             "exited": true
@@ -42,12 +24,66 @@
             "deviceId": "c508d88a",
             "name": "com.qqlabs.minimalistlauncher",
             "processId": 19443,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "c508d88a",
             "name": "com.DefaultCompany.ARFOUND",
             "processId": 23451,
+            "exited": true
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 5338,
+            "exited": true
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.qqlabs.minimalistlauncher",
+            "processId": 5891,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 18065,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 27368,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 31566,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 3968,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 18027,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 21189,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 22342,
             "exited": false
         }
     ],
