@@ -33,23 +33,16 @@ public class CoreController : MonoBehaviour
 
     public GameObject taskBar;
 
-    public readonly List<Action> InputHandlers = new List<Action>();
-
     public void Start()
     {
         Cursor = GetComponent<ArCursor>();
-        // Add basic input handlers
-        InputHandlers.Add(CheckNewWindowCreation);
-        InputHandlers.Add(CheckStandardWindowInteractions);
     }
 
     public void Update()
     {
         Cursor.RaycastCursor();
-        foreach (var handler in InputHandlers)
-        {
-            handler();
-        }
+        CheckNewWindowCreation();
+        CheckStandardWindowInteractions();
     }
 
     /// <summary>
@@ -58,7 +51,7 @@ public class CoreController : MonoBehaviour
     public GameObject InstantiateEmptyWindow(Vector3 position, Quaternion rotation)
     {
         GameObject newWindow = Instantiate(emptyWindowPrefab, position, rotation);
-        newWindow.GetComponent<Window>().app = this;
+        newWindow.GetComponent<Window>().app = this; 
         _windows.Add(newWindow);
         return newWindow;
     }
