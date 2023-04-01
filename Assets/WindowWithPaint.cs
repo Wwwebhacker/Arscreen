@@ -40,11 +40,13 @@ public class WindowWithPaint : Window
         copyTexture.Apply();
         _renderer.material.EnableKeyword("_NORMALMAP");
         _renderer.material.SetTexture("_MainTex", copyTexture);
-        
-        // Add Input handlers to core
-        app.InputHandlers.Add(CheckDrawing);
-        app.InputHandlers.Add(CheckStopDrawing);
-        app.InputHandlers.Add(CheckButtons);
+    }
+
+    void Update()
+    {
+        CheckDrawing();
+        CheckStopDrawing();
+        CheckButtons();
     }
 
     private void DrawPoint(Texture2D tex, Vector2 point)
@@ -97,6 +99,10 @@ public class WindowWithPaint : Window
                 hit.collider.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().material
                     .color = new Color(0.2f,0.2f,0.2f)*_debug;
                 break;
+            case "CloseWindowButton":
+                Destroy(app.ActiveWindow);
+                break;
+
         }
     }
 
