@@ -38,8 +38,8 @@ public class WindowWithPaint : Window
         var copyTexture = new Texture2D(originalTexture.width, originalTexture.height);
         copyTexture.SetPixels(originalTexture.GetPixels());
         copyTexture.Apply();
-        _renderer.material.EnableKeyword("_NORMALMAP");
-        _renderer.material.SetTexture("_MainTex", copyTexture);
+        //_renderer.material.EnableKeyword("_NORMALMAP");
+        _renderer.material.mainTexture = copyTexture;
     }
 
     void Update()
@@ -109,10 +109,9 @@ public class WindowWithPaint : Window
     private void CheckStopDrawing()
     {
         // Conditions
-        if (app.ActiveWindow != gameObject) return;
         if (Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Ended) return;
-        //
         if (_tool == Tools.Line) return;
+        //
         _lastPoint = NO_POINT;
     }
 
