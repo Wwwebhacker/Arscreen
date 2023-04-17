@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "711KPMZ0636147",
+    "m_SelectedDeviceId": "34HDU20228005205",
     "m_SelectedPackage": {
-        "deviceId": "711KPMZ0636147",
+        "deviceId": "34HDU20228005205",
         "name": "com.DefaultCompany.ARFOUND",
-        "processId": 16237,
+        "processId": 22101,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -144,6 +144,66 @@
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
             "processId": 16237,
+            "exited": false
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 30748,
+            "exited": true
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 2075,
+            "exited": true
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 4508,
+            "exited": true
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 7356,
+            "exited": true
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 9911,
+            "exited": false
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 14565,
+            "exited": false
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 15179,
+            "exited": false
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 18655,
+            "exited": false
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 20143,
+            "exited": false
+        },
+        {
+            "deviceId": "34HDU20228005205",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 22101,
             "exited": false
         }
     ],

@@ -7,9 +7,12 @@ public class CoreController : MonoBehaviour
 {
 
     public GameObject emptyWindowPrefab;
+    public GameObject textObject;
+    
 
 
     private GameObject _activeWindow;
+    
 
     [HideInInspector]
     public GameObject ActiveWindow
@@ -31,7 +34,9 @@ public class CoreController : MonoBehaviour
     
     public ArCursor Cursor { private set; get; }
 
-    public GameObject taskBar;
+    
+    
+    
 
     public void Start()
     {
@@ -58,10 +63,21 @@ public class CoreController : MonoBehaviour
 
     private void CheckNewWindowCreation()
     {
+
+
+        
+
         if (Input.touchCount == 0) return;
         if (Input.GetTouch(0).phase != TouchPhase.Began) return;
+
         if (!Cursor.RaycastCursor() || ActiveWindow) return;
-        
+
+
+       
+            // canvas
+      
+
+
         // setting window on eyesight height
         var cursorPosition = Cursor.transform.position;
         var windowPosition = new Vector3(cursorPosition.x, Camera.main.transform.position.y,

@@ -49,6 +49,8 @@ public class ArCursor : MonoBehaviour
                 _app.ActiveWindow = window;
                 return true;
             }
+
+            
         }
         
         _app.ActiveWindow = null;
