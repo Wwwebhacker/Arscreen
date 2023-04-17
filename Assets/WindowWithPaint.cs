@@ -13,6 +13,10 @@ public class WindowWithPaint : Window
     private Renderer _renderer;
     private int _brushSize = 1;
     private int _colorIdx = 0;
+
+    ////czy okno jest zminimalizowane?
+    private bool _minimized = false;
+
     private Color BrushColor
     {
         set {}
@@ -44,9 +48,12 @@ public class WindowWithPaint : Window
 
     void Update()
     {
-        CheckDrawing();
-        CheckStopDrawing();
-        CheckButtons();
+        if (_minimized == false)
+        {
+            CheckDrawing();
+            CheckStopDrawing();
+        }
+        CheckButtons(); //trzeba by rozdzielic na sprawdzanie TOP buttons i buttons w oknie
     }
 
     private void DrawPoint(Texture2D tex, Vector2 point)
@@ -99,8 +106,29 @@ public class WindowWithPaint : Window
                 hit.collider.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().material
                     .color = new Color(0.2f,0.2f,0.2f)*_debug;
                 break;
+
             case "CloseWindowButton":
                 Destroy(app.ActiveWindow);
+                break;
+
+            case "MinimizeWindowButton":
+                if (_minimized == false)
+                {
+                    _minimized = true;
+                    GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+                }
+                else if (_minimized == true)
+                {
+                    _minimized = false;
+                    GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    screen.transform.localScale = new Vector3(0.45f, 0.25f, 0.01f);
+                }
+
+                //TODO
+                //zaiplementowac minimalizacje
+
+
                 break;
 
         }

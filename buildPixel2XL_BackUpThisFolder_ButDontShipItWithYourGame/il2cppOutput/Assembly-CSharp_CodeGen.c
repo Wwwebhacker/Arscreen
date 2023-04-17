@@ -1727,7 +1727,9 @@ extern void U3CU3Ec__ctor_m2BD016EA14B353A86C3AEF7998A3898734D6E29D (void);
 extern void U3CU3Ec_U3C_ctorU3Eb__47_0_m542371E9EEF4F0CA84F85120F2656BB3F9961917 (void);
 // 0x0000035D System.Void ManoMotion.HowToUse.HowToInstructor/<>c::<.ctor>b__47_1()
 extern void U3CU3Ec_U3C_ctorU3Eb__47_1_mD0A5F0860539A377F62F1B41367C21859ED08D80 (void);
-static Il2CppMethodPointer s_methodPointers[861] = 
+// 0x0000035E System.UInt32 <PrivateImplementationDetails>::ComputeStringHash(System.String)
+extern void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876 (void);
+static Il2CppMethodPointer s_methodPointers[862] = 
 {
 	ArCursor_set_LastHitInfo_m2B40988E2F37ED108CDDB4980BB3CBA70F030B2F,
 	ArCursor_get_LastHitInfo_mC459546D0A8C90742FE7DFAD68D64464B0EAF711,
@@ -2590,8 +2592,9 @@ static Il2CppMethodPointer s_methodPointers[861] =
 	U3CU3Ec__ctor_m2BD016EA14B353A86C3AEF7998A3898734D6E29D,
 	U3CU3Ec_U3C_ctorU3Eb__47_0_m542371E9EEF4F0CA84F85120F2656BB3F9961917,
 	U3CU3Ec_U3C_ctorU3Eb__47_1_mD0A5F0860539A377F62F1B41367C21859ED08D80,
+	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876,
 };
-static const int32_t s_InvokerIndices[861] = 
+static const int32_t s_InvokerIndices[862] = 
 {
 	4393,
 	5405,
@@ -3454,12 +3457,13 @@ static const int32_t s_InvokerIndices[861] =
 	5495,
 	5495,
 	5495,
+	8376,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	861,
+	862,
 	s_methodPointers,
 	0,
 	NULL,
