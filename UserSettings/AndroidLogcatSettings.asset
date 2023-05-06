@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "34HDU20228005205",
+    "m_SelectedDeviceId": "711KPMZ0636147",
     "m_SelectedPackage": {
-        "deviceId": "34HDU20228005205",
+        "deviceId": "711KPMZ0636147",
         "name": "com.DefaultCompany.ARFOUND",
-        "processId": 22101,
+        "processId": 2462,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -89,61 +89,145 @@
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 9934,
+            "processId": 5060,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
-            "name": "com.google.android.apps.nexuslauncher",
-            "processId": 2339,
-            "exited": false
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 11442,
+            "name": "com.android.settings",
+            "processId": 2219,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 12341,
+            "processId": 8001,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 7562,
+            "processId": 15640,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
-            "name": "com.android.vending",
-            "processId": 1945,
+            "name": "com.google.android.youtube",
+            "processId": 7519,
             "exited": false
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 11976,
+            "processId": 19776,
             "exited": false
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 13967,
+            "processId": 20778,
             "exited": false
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 14583,
+            "processId": 21344,
             "exited": false
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 16237,
+            "processId": 22294,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 23325,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 25084,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 25526,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 25690,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 26885,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 27629,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 28311,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 29063,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 29893,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 30845,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 31482,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 32170,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 32475,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 1329,
+            "exited": false
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 2462,
             "exited": false
         },
         {

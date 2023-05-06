@@ -8,7 +8,6 @@ public class WindowWithPicture : Window
 {
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +18,7 @@ public class WindowWithPicture : Window
     {
         CheckButtons();
     }
+    
     private void CheckButtons()
     {
         // Conditions
@@ -34,8 +34,20 @@ public class WindowWithPicture : Window
                 Destroy(app.ActiveWindow);
                 break;
 
+            case "MinimizeWindowButton":
+                if (_minimized == false)
+                {
+                    _minimized = true;
+                    GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+                }
+                else if (_minimized == true)
+                {
+                    _minimized = false;
+                    GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    screen.transform.localScale = new Vector3(0.45f, 0.25f, 0.01f);
+                }
+                break;
         }
-
-
     }
 }
