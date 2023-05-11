@@ -65,10 +65,11 @@ public class CoreController : MonoBehaviour
     {
 
 
-        
-
-        if (Input.touchCount == 0) return;
-        if (Input.GetTouch(0).phase != TouchPhase.Began) return;
+        ManomotionManager.Instance.ShouldCalculateGestures(true);
+        if (ManomotionManager.Instance.Hand_infos[0].hand_info.gesture_info.mano_gesture_trigger !=
+            ManoGestureTrigger.CLICK) return;
+        //     if (Input.touchCount == 0) return;
+        // if (Input.GetTouch(0).phase != TouchPhase.Began) return;
 
         if (!Cursor.RaycastCursor() || ActiveWindow) return;
 
