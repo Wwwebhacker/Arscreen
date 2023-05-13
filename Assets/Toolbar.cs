@@ -19,6 +19,7 @@ public class Toolbar : MonoBehaviour
         app.emptyWindowPrefab = window;
 
     }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +32,10 @@ public class Toolbar : MonoBehaviour
         
     }
 
-
     public static bool IsPartOfToolbar(GameObject obj)
     {
-        
         if (!obj) return false;
+
         while (!obj.TryGetComponent<Toolbar>(out var _))
         {
             if (!obj.transform.parent) return false;

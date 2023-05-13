@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class CoreController : MonoBehaviour
 {
-
     public GameObject emptyWindowPrefab;
     public GameObject textObject;
-    
-
-
     private GameObject _activeWindow;
-    
+
+    //moja sciana
+    //public GameObject wallObject; 
 
     [HideInInspector]
     public GameObject ActiveWindow
@@ -33,10 +31,6 @@ public class CoreController : MonoBehaviour
     private readonly List<GameObject> _windows = new List<GameObject>();
     
     public ArCursor Cursor { private set; get; }
-
-    
-    
-    
 
     public void Start()
     {
@@ -63,21 +57,12 @@ public class CoreController : MonoBehaviour
 
     private void CheckNewWindowCreation()
     {
-
-
-        
-
         if (Input.touchCount == 0) return;
         if (Input.GetTouch(0).phase != TouchPhase.Began) return;
 
         if (!Cursor.RaycastCursor() || ActiveWindow) return;
 
-
-       
-            // canvas
-      
-
-
+        // canvas
         // setting window on eyesight height
         var cursorPosition = Cursor.transform.position;
         var windowPosition = new Vector3(cursorPosition.x, Camera.main.transform.position.y,
@@ -106,68 +91,44 @@ public class CoreController : MonoBehaviour
             {
                 case "Bar":
                 {
-                    var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
-                    var p = onAim.transform.position - ActiveWindow.transform.position;
+                        var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
+                        var p = onAim.transform.position - ActiveWindow.transform.position;
 
-                    ActiveWindow.transform.position = newPos - p;
-                    ActiveWindow.transform.rotation = Camera.main.transform.rotation;
-                    break;
-                }
-                //TODO
-                case "FrameLeft":
-                {
-                        //tu zmienic rozmiary w lewo
-
+                        ActiveWindow.transform.position = newPos - p;
+                        ActiveWindow.transform.rotation = Camera.main.transform.rotation;
                         break;
                 }
+                case "FrameLeft":
+                {
+                        var CursorPosition = Cursor.transform.position;
+                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                        var FramePositionLocal = ActiveWindow.transform.Find("FrameLeft").transform.localPosition;
+                        var Difference = FramePositionLocal.x - LocalCursorPosition.x;
+
+                        ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
+                        ActiveWindow.transform.localPosition -= new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                        break;
+                    }
                 case "FrameRight":
                 {
-                        //tu zmienic rozmiary w prawo
-                        //var newPosition = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
-                        //var currentPosition = ActiveWindow.transform.position;
-                        //var p = onAim.transform.position - ActiveWindow.transform.position;
+                        var CursorPosition = Cursor.transform.position;
+                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                        var FramePositionLocal = ActiveWindow.transform.Find("FrameRight").transform.localPosition;
+                        var Difference = LocalCursorPosition.x - FramePositionLocal.x;
 
-                        //Debug.Log("newPosition: " + newPosition);
-                        //Debug.Log("currentPosition: " + currentPosition);
-                        //Debug.Log("p: " + p);
+                        ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
+                        ActiveWindow.transform.localPosition += new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                        break;
+                    }
+                case "FrameBottom":
+                {
+                        var CursorPosition = Cursor.transform.position;
+                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                        var FramePositionLocal = ActiveWindow.transform.Find("FrameBottom").transform.localPosition;
+                        var Difference = FramePositionLocal.y - LocalCursorPosition.y;
 
-
-                        //ActiveWindow.transform.localScale = new Vector3(p.x - newPosition.x, 1, 1);
-
-                        //pseudo dzialajace
-                        //ActiveWindow.transform.position += new Vector3(0f, 0f, 1f) * 1.5f / 2.0f;
-                        //ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * 1.5f;
-
-                        var CursorPosition = Cursor.transform.position; //dodac to forwad?
-                        var FramePosition = ActiveWindow.transform.Find("FrameRight").transform.position;
-                        //problem to jest pozycja wobec obiektu rodzica nie obiektu wobec calej przestrzeni! albo i nie?
-                        var difference = CursorPosition.x - FramePosition.x;
-
-                        Debug.Log("difference" + difference); 
-                        
-                        Debug.Log("Camera Position: " + Camera.main.transform.position);
-                        Debug.Log("Window Position: " + ActiveWindow.transform.position);
-                        Debug.Log("Frame  Position: " + ActiveWindow.transform.Find("FrameRight").transform.position);
-
-                        //Debug.Log("--Wyniki--");
-                        //Debug.Log("Window - Camera" + (Camera.main.transform.position - ActiveWindow.transform.position));
-                        //Debug.Log("Window - Camera" + (Camera.main.transform.position - ActiveWindow.transform.position));
-
-
-
-                        //ActiveWindow.transform.position += new Vector3(0f, 0f, 1f) * (CameraPosition-FramePosition) / 2.0f;
-                       // ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * difference; //czy na pewno x?
-                        //ActiveWindow.transform.position += new Vector3(1f, 0f, 0f) * difference;
-
-                        /*
-                        Debug.Log("Camera Position: " + Camera.main.transform.position);
-                        Debug.Log("Window Position: " + ActiveWindow.transform.position);
-                        Debug.Log("Frame Right position: " + ActiveWindow.transform.Find("FrameRight").transform.position);
-
-                        Debug.Log("--Wyniki--");
-                        Debug.Log("Window - Camera" + (Camera.main.transform.position - ActiveWindow.transform.position));
-                        Debug.Log("Window - Camera" + (Camera.main.transform.position - ActiveWindow.transform.position));
-                        */
+                        ActiveWindow.transform.localScale += new Vector3(0f, 1f, 0f) * Difference;
+                        ActiveWindow.transform.localPosition -= new Vector3(0f, 1f, 0f) * Difference / 2.0f;
                         break;
                 }
             }

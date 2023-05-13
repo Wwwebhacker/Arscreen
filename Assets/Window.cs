@@ -2,13 +2,20 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Window Class.
+/// </summary>
+/// <param name="_minimized">Boolean flag informs whether window is minimized or not</param>
+/// <param name="_savedScaleOfWindow">Saves the scale of window, so it's value can be reset</param>
 public class Window : MonoBehaviour
 {
-     [HideInInspector] public CoreController app;
-
-    //this bool tells us in all inherited windows if window is minimized.
+    [HideInInspector] public CoreController app;
     protected bool _minimized = false;
-
+    protected Vector3 _savedScaleOfWindow = new Vector3(1.0f, 1.0f, 1.0f);
+    protected Vector3 _savedScaleOfScreen = new Vector3(0.45f, 0.25f, 0.01f);
+    protected Vector3 _savedScaleOfFrameRight;
+    protected Vector3 _savedScaleOfFrameLeft;
+    protected Vector3 _savedScaleOfFrameBottom;
 
     /// <summary>
     /// Checks if game object is part of Window object.
@@ -17,7 +24,7 @@ public class Window : MonoBehaviour
     /// <param name="window">Top GameObject of Window instance.</param>
     /// <returns>True if obj has a parent with attached "Window" script.</returns>
     public static bool IsPartOfWindow(GameObject obj, out GameObject window)
-     {
+    {
           window = obj;
           if (!obj) return false;
           while (! obj.TryGetComponent<Window>(out var _))
@@ -27,7 +34,7 @@ public class Window : MonoBehaviour
           }
           window = obj;
           return true;
-     }
+    }
 
     /*
     protected void CheckButtons()

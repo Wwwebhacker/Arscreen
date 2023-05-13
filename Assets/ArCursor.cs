@@ -6,7 +6,6 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ArCursor : MonoBehaviour
 {
-
     private CoreController _app;
     public ARRaycastManager raycastManager;
     public RaycastHit LastHitInfo { private set; get; }
@@ -65,6 +64,5 @@ public class ArCursor : MonoBehaviour
             return true;
         }
         return false;
-
     }
 }

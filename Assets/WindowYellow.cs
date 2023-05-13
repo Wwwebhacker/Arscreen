@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class WindowYellow : Window
 {
-
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+        _savedScaleOfWindow = screen.transform.localScale;
     }
     void Update()
     {
         CheckButtons();
     }
-
     private void CheckButtons()
     {
         // Conditions
@@ -24,7 +23,6 @@ public class WindowYellow : Window
         var hit = app.Cursor.LastHitInfo;
         switch (hit.collider.name)
         {
-
             case "CloseWindowButton":
                 Destroy(app.ActiveWindow);
                 break;
@@ -40,10 +38,16 @@ public class WindowYellow : Window
                 {
                     _minimized = false;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-                    screen.transform.localScale = new Vector3(0.45f, 0.25f, 0.01f);
+                    screen.transform.localScale = _savedScaleOfWindow;
                 }
                 break;
-
+            case "MoveToWall":
+                //to napewno nie jest dobrze zrobione ale zobaczmy czy dziala
+                //TODO
+                GameObject anyWall = GameObject.Find("Wall");
+                if (anyWall != null)
+                    app.ActiveWindow.transform.parent = anyWall.transform;
+                break;
         }
     }
 }

@@ -6,12 +6,11 @@ using Color = UnityEngine.Color;
 
 public class WindowWithPicture : Window
 {
-
-
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+        _savedScaleOfWindow = screen.transform.localScale;
     }
 
     void Update()

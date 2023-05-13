@@ -4,17 +4,23 @@ using System.Drawing;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
+/// <summary>
+/// WindowWithPaint Class.
+/// </summary>
+/// <param name="original Texture">?</param>
+/// <param name="NO_POINT">?</param>
+/// <param name="_lastPoint">?</param>
+/// <param name="_renderer">?</param>
+/// <param name="_brushSize">Size of the brush used to paint on screen</param>
+/// <param name="_color">Index of a color used to paint on screen</param>
 public class WindowWithPaint : Window
 {
-
     public Texture2D originalTexture;
     private static readonly Vector2 NO_POINT = Vector2.zero;
     private Vector2 _lastPoint = NO_POINT;
     private Renderer _renderer;
     private int _brushSize = 1;
     private int _colorIdx = 0;
-
-    private bool _minimized = false;
 
     private Color BrushColor
     {
@@ -33,7 +39,6 @@ public class WindowWithPaint : Window
     Color.red, Color.blue, Color.green, Color.magenta, Color.yellow, Color.black, Color.white
     };
 
-    // Start is called before the first frame update
     void Start()
     {
         var drawingArea = transform.GetChild(1).gameObject;
@@ -43,6 +48,9 @@ public class WindowWithPaint : Window
         copyTexture.Apply();
         _renderer.material.EnableKeyword("_NORMALMAP");
         _renderer.material.SetTexture("_MainTex", copyTexture);
+
+        GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+        _savedScaleOfWindow = app.ActiveWindow.transform.localScale;
     }
 
     void Update()
@@ -115,13 +123,14 @@ public class WindowWithPaint : Window
                 {
                     _minimized = true;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    _savedScaleOfWindow = screen.transform.localScale;
                     screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
                 }
                 else if (_minimized == true)
                 {
                     _minimized = false;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-                    screen.transform.localScale = new Vector3(0.45f, 0.25f, 0.01f);
+                    screen.transform.localScale = _savedScaleOfWindow;
                 }
                 break;
         }
@@ -187,6 +196,5 @@ public class WindowWithPaint : Window
         pixelUV.x *= tex.width;
         pixelUV.y *= tex.height;
         var p = pixelUV;
-
     }
 }
