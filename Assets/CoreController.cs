@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class CoreController : MonoBehaviour
 {
-
     public GameObject emptyWindowPrefab;
     public GameObject textObject;
-    
-
-
     private GameObject _activeWindow;
-    
+
+    //moja sciana
+    //public GameObject wallObject; 
 
     [HideInInspector]
     public GameObject ActiveWindow
@@ -33,10 +31,6 @@ public class CoreController : MonoBehaviour
     private readonly List<GameObject> _windows = new List<GameObject>();
     
     public ArCursor Cursor { private set; get; }
-
-    
-    
-    
 
     public void Start()
     {
@@ -63,21 +57,12 @@ public class CoreController : MonoBehaviour
 
     private void CheckNewWindowCreation()
     {
-
-
-        
-
         if (Input.touchCount == 0) return;
         if (Input.GetTouch(0).phase != TouchPhase.Began) return;
 
         if (!Cursor.RaycastCursor() || ActiveWindow) return;
 
-
-       
-            // canvas
-      
-
-
+        // canvas
         // setting window on eyesight height
         var cursorPosition = Cursor.transform.position;
         var windowPosition = new Vector3(cursorPosition.x, Camera.main.transform.position.y,
@@ -106,12 +91,45 @@ public class CoreController : MonoBehaviour
             {
                 case "Bar":
                 {
-                    var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
-                    var p = onAim.transform.position - ActiveWindow.transform.position;
+                        var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
+                        var p = onAim.transform.position - ActiveWindow.transform.position;
 
-                    ActiveWindow.transform.position = newPos - p;
-                    ActiveWindow.transform.rotation = Camera.main.transform.rotation;
-                    break;
+                        ActiveWindow.transform.position = newPos - p;
+                        ActiveWindow.transform.rotation = Camera.main.transform.rotation;
+                        break;
+                }
+                case "FrameLeft":
+                {
+                        var CursorPosition = Cursor.transform.position;
+                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                        var FramePositionLocal = ActiveWindow.transform.Find("FrameLeft").transform.localPosition;
+                        var Difference = FramePositionLocal.x - LocalCursorPosition.x;
+
+                        ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
+                        ActiveWindow.transform.localPosition -= new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                        break;
+                    }
+                case "FrameRight":
+                {
+                        var CursorPosition = Cursor.transform.position;
+                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                        var FramePositionLocal = ActiveWindow.transform.Find("FrameRight").transform.localPosition;
+                        var Difference = LocalCursorPosition.x - FramePositionLocal.x;
+
+                        ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
+                        ActiveWindow.transform.localPosition += new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                        break;
+                    }
+                case "FrameBottom":
+                {
+                        var CursorPosition = Cursor.transform.position;
+                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                        var FramePositionLocal = ActiveWindow.transform.Find("FrameBottom").transform.localPosition;
+                        var Difference = FramePositionLocal.y - LocalCursorPosition.y;
+
+                        ActiveWindow.transform.localScale += new Vector3(0f, 1f, 0f) * Difference;
+                        ActiveWindow.transform.localPosition -= new Vector3(0f, 1f, 0f) * Difference / 2.0f;
+                        break;
                 }
             }
         }
