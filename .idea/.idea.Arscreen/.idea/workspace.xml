@@ -1,20 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e7dce38c-2f29-4b3a-ab6b-176e61d39d2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Window.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WindowWithPaint.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BarMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BarMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screen.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screen.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/EditorScripts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/EditorScripts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ManoMotionSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ManoMotionSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/3DAssets/LayeringSphere.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/3DAssets/LayeringSphere.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/3DAssets/Ring/GoldPearlRing.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/3DAssets/Ring/GoldPearlRing.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/3DAssets/outerdotsPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/3DAssets/outerdotsPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/ApplicationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/ApplicationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/HowToAnimations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/HowToAnimations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/HowToInstructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/HowToInstructor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Instructions/DetectionInstruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Instructions/DetectionInstruction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Instructions/GestureInstruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Instructions/GestureInstruction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Instructions/HandSideInstruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Instructions/HandSideInstruction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/RunTimeApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/RunTimeApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Sprites/HandOutlineOpacity40-01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Sprites/HandOutlineOpacity40-01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Sprites/checked.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/ApplicationIntro/Sprites/checked.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Camera Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Camera Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts/CameraSelector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts/CameraSelector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts/CameraSelectorToggle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts/CameraSelectorToggle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts/InputManagerAdjustable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Camera Managment/Scripts/InputManagerAdjustable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/FingerInformationExampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/FingerInformationExampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/GoldPearlRing_v2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/GoldPearlRing_v2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials/Pearl_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials/Pearl_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials/RingStone_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials/RingStone_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials/Ring_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/Materials/Ring_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/RingExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/RingExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/RingTryOn - Example Pearl Ring.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/RingTryOn - Example Pearl Ring.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/RingTryOn - Example.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/RingTryOn - Example.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/ring2Parts.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/ring2Parts.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/ring2Parts.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/ring2Parts.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/ringExampleIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/FingerInformationExample/ringExampleIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/Dial_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/Dial_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/Strap_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/Strap_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/WatchExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/WatchExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/WristInformationExampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/WristInformationExampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/watch2Parts_v2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/watch2Parts_v2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/watch2Parts_v2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/watch2Parts_v2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/wristWatchIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Examples/WristnformationExample/wristWatchIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Fonts/sofiapro/Fonts/SofiaLight.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Fonts/sofiapro/Fonts/SofiaLight.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Materials/FingerInfoGreenRight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Materials/FingerInfoGreenRight.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Materials/FingerInfoYellowLeft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Materials/FingerInfoYellowLeft.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Materials/FingerInfoYellowLeft.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Materials/FingerInfoYellowLeft.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Materials/WristInfoBlueRight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Materials/WristInfoBlueRight.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Materials/WristInfoBlueRight.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Materials/WristInfoBlueRight.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Materials/WristInfoRedLeft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Materials/WristInfoRedLeft.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/GenericManomotionLayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/GenericManomotionLayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/ManomotionCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/ManomotionCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/ManomotionManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/ManomotionManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/bounding box.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Prefabs/bounding box.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scenes/ManoMotionSDKPro.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scenes/ManoMotionSDKPro.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/BoundingBoxUIInner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/BoundingBoxUIInner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/GestureInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/GestureInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManoLicense.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManoLicense.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManoMotionFrame.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManoMotionFrame.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManoSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManoSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/ManomotionManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/Session.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/TrackingInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/TrackingInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/VisualizationInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/VisualizationInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/VisualizationInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/VisualizationInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/WorldSkeletonInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Data Structure/WorldSkeletonInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/ContourGizmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/ContourGizmo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/FingerInfoGizmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/FingerInfoGizmo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/GizmoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/GizmoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/TryOnLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/TryOnLine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/WristInfoGizmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Gizmos/WristInfoGizmo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/BoundingBoxUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/BoundingBoxUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/InputManagerBaseClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/InputManagerBaseClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/InputManagerPhoneCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/InputManagerPhoneCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/ManoVisualization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/ManoVisualization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/ToggleVisualizationValues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/ManoVisualization/ToggleVisualizationValues.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Skeleton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Skeleton/DrawLineBetweenJoints.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Skeleton/DrawLineBetweenJoints.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Skeleton/SkeletonManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Skeleton/SkeletonManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Util Tools/ManoEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Util Tools/ManoEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Util Tools/ManoUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Scripts/Util Tools/ManoUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_DarkGreen.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_DarkGreen.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Purple.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Purple.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_2D_Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_DarkGreen.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_DarkGreen.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Purple.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Purple.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/SkeletonJointMaterial_3D_Yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Materials/circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/2D Joints No lines.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/2D Joints No lines.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/2D Joints.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/2D Joints.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/3D Joints.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/3D Joints.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/Joint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Skeleton/Prefabs/Joint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/Circle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/Circle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/Gizmo Sprites/Ring.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/Gizmo Sprites/Ring.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/BotInstruction.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/BotInstruction.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/Outline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/Outline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/Skip.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/Skip.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/ThumbsUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/ThumbsUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/TopInstruction.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/HowToUseInstructions/TopInstruction.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/Logos/LogoSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/Logos/LogoSprite.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/MessageDisplay.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/MessageDisplay.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/background_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/background_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/bounding_box_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/bounding_box_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/calibration_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/calibration_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/continuous_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/continuous_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/contour_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/contour_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/layering_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/layering_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/mano_class_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/mano_class_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/rotation_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/rotation_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/states_inactive@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Active/states_inactive@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Depth.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/Depth.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/calibration.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/calibration.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/continuous@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/continuous@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/mano_class@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/mano_class@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/rotation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/rotation.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/states@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Buttons/states@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/BoundingBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/BoundingBox.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/background@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/background@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/bounding_box@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/bounding_box@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/calibration@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/calibration@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/continuous@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/continuous@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/contour@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/contour@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/fingertip_labeling@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/fingertip_labeling@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/flip.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/flip.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/instructions.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/instructions.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/layering@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/layering@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/mano_class@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/mano_class@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/rotation@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/rotation@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/states@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/UI Icons/states@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/Sprites/close_icon@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/Sprites/close_icon@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manomotion/UIBlurEffect/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manomotion/UIBlurEffect/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/Libs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/Libs/arm64-v8a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/Libs/arm64-v8a/libmanomotion.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/Libs/arm64-v8a/libmanomotion.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/Headers/entry_point_iOS.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/Headers/entry_point_iOS.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/Headers/entry_point_iOS.hpp.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/Headers/entry_point_iOS.hpp.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/Info.plist.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/Info.plist.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/libManomotion.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/libManomotion.framework/libManomotion.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SDK PRO 1.4.9 - Technical Documentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SDK PRO 1.4.9 - Technical Documentation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SDK PRO 1.4.9 - Technical Documentation.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SDK PRO 1.4.9 - Technical Documentation.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Setup ManoMotion SDK PRO 1.4.9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Setup ManoMotion SDK PRO 1.4.9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/WindowWithPaint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WindowWithPaint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPicture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WindowWithPicture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WindowYellow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WindowYellow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
@@ -26,8 +231,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Window.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WindowWithPaint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Arscreen_manostart/Assets/InputHandler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,27 +245,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\SaySaeqo\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\SaySaeqo\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\UnityHub\Unity\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\SaySaeqo\OneDrive\Dokumenty\Unity\Arscreen -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\SaySaeqo\OneDrive\Dokumenty\Unity\Arscreen" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\UnityHub\Unity\2021.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\SaySaeqo\OneDrive\Dokumenty\Unity\Arscreen -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\SaySaeqo\OneDrive\Dokumenty\Unity\Arscreen" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -106,6 +325,7 @@
       <workItem from="1678487219492" duration="11198000" />
       <workItem from="1678544392754" duration="1902000" />
       <workItem from="1679153317150" duration="19846000" />
+      <workItem from="1683992333542" duration="4888000" />
     </task>
     <servers />
   </component>
