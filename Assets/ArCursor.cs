@@ -35,9 +35,28 @@ public class ArCursor : MonoBehaviour
     /// <returns>True if Window Object of AR plane was hit.</returns>
     public bool RaycastCursor()
     {
+        Ray ray;
+        if (InputHandler.isUsingGestures)
+        {
+            var joints = SkeletonManager.instance._listOfJoints;
+            Vector3 indexFinger = joints[8].transform.position;
+            Vector3 thumbFinger = joints[4].transform.position;
+            Vector3 midPoint = Vector3.Lerp(thumbFinger, indexFinger, 0.5f);
+            Vector3 direction = midPoint - Camera.main.transform.position;
+            direction.Normalize();
+            ray = new Ray(Camera.main.transform.position, direction);
+        }
+        else
+        {
+            ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        }
+        // 
+        
+        float rayLength = 10.0f;
+
         // check for window hit
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, 
-                out var hit, 5.0f))
+        if (Physics.Raycast(ray, 
+                out var hit, rayLength))
         {
             LastHitInfo = hit;
             if (Window.IsPartOfWindow(LastHitInfo.collider.gameObject, out var window))
@@ -54,9 +73,9 @@ public class ArCursor : MonoBehaviour
         
         _app.ActiveWindow = null;
         // check for plane hit
-        Vector2 centerOfScreen = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
+        // Vector2 centerOfScreen = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
-        raycastManager.Raycast(centerOfScreen, hits, TrackableType.Planes);
+        raycastManager.Raycast(ray, hits, TrackableType.Planes);
         if (hits.Count > 0)
         {
             transform.position = hits[0].pose.position;
