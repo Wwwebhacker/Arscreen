@@ -80,7 +80,7 @@ public class WindowWithPaint : Window
     {
         // Conditions
         if (app.ActiveWindow != gameObject) return;
-        if (Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Began) return;
+        if(! InputHandler.clicked()) return;
         //
 
         var hit = app.Cursor.LastHitInfo;
@@ -140,7 +140,7 @@ public class WindowWithPaint : Window
     {
         // Conditions
         if (app.ActiveWindow != gameObject) return;
-        if (Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Ended) return;
+        if(InputHandler.holding()) return;
         //
         if (_tool == Tools.Line) return;
         _lastPoint = NO_POINT;
@@ -150,7 +150,7 @@ public class WindowWithPaint : Window
     {
         // Conditions
         if (app.ActiveWindow != gameObject) return;
-        if (Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Stationary) return;
+        if(! InputHandler.holding()) return;
         var hit = app.Cursor.LastHitInfo;
         if (hit.collider.name != "Screen") return;
         //if (_tool != Tools.Brush) return;
@@ -185,7 +185,7 @@ public class WindowWithPaint : Window
     {
         // Conditions
         if (app.ActiveWindow != gameObject) return;
-        if (Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Stationary) return;
+        if(! InputHandler.holding()) return;
         var hit = app.Cursor.LastHitInfo;
         if (hit.collider.name != "Screen") return;
         if (_tool != Tools.Line) return;

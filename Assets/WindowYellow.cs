@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WindowYellow : Window
@@ -18,7 +19,7 @@ public class WindowYellow : Window
     {
         // Conditions
         if (app.ActiveWindow != gameObject) return;
-        if (Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Began) return;
+        if(! InputHandler.clicked()) return;
 
         var hit = app.Cursor.LastHitInfo;
         switch (hit.collider.name)
