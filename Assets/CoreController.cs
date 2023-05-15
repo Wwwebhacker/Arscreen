@@ -57,8 +57,7 @@ public class CoreController : MonoBehaviour
 
     private void CheckNewWindowCreation()
     {
-        if (Input.touchCount == 0) return;
-        if (Input.GetTouch(0).phase != TouchPhase.Began) return;
+        if (!InputHandler.clicked()) return;
 
         if (!Cursor.RaycastCursor() || ActiveWindow) return;
 
@@ -80,58 +79,55 @@ public class CoreController : MonoBehaviour
     /// </summary>
     private void CheckStandardWindowInteractions()
     {
-        if (Input.touchCount == 0) return;
-        if (! ActiveWindow) return;
-
+        if (!Cursor.LastHitInfo.collider) return;
+        if (!InputHandler.holding()) return;
         var onAim = Cursor.LastHitInfo.collider.gameObject;
 
-        if (Input.GetTouch(0).phase == TouchPhase.Stationary)
+        switch (onAim.name)
         {
-            switch (onAim.name)
+            case "Bar":
             {
-                case "Bar":
-                {
-                        var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
-                        var p = onAim.transform.position - ActiveWindow.transform.position;
+                    var newPos = Camera.main.transform.position + (Camera.main.transform.forward * 1.0f);
+                    var p = onAim.transform.position - ActiveWindow.transform.position;
 
-                        ActiveWindow.transform.position = newPos - p;
-                        ActiveWindow.transform.rotation = Camera.main.transform.rotation;
-                        break;
+                    ActiveWindow.transform.position = newPos - p;
+                    ActiveWindow.transform.rotation = Camera.main.transform.rotation;
+                    break;
+            }
+            case "FrameLeft":
+            {
+                    var CursorPosition = Cursor.transform.position;
+                    var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                    var FramePositionLocal = ActiveWindow.transform.Find("FrameLeft").transform.localPosition;
+                    var Difference = FramePositionLocal.x - LocalCursorPosition.x;
+
+                    ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
+                    //ActiveWindow.transform.localPosition -= new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                    break;
                 }
-                case "FrameLeft":
-                {
-                        var CursorPosition = Cursor.transform.position;
-                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
-                        var FramePositionLocal = ActiveWindow.transform.Find("FrameLeft").transform.localPosition;
-                        var Difference = FramePositionLocal.x - LocalCursorPosition.x;
+            case "FrameRight":
+            {
+                    var CursorPosition = Cursor.transform.position;
+                    var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                    var FramePositionLocal = ActiveWindow.transform.Find("FrameRight").transform.localPosition;
+                    var Difference = LocalCursorPosition.x - FramePositionLocal.x;
 
-                        ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
-                        //ActiveWindow.transform.localPosition -= new Vector3(1f, 0f, 0f) * Difference / 2.0f;
-                        break;
-                    }
-                case "FrameRight":
-                {
-                        var CursorPosition = Cursor.transform.position;
-                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
-                        var FramePositionLocal = ActiveWindow.transform.Find("FrameRight").transform.localPosition;
-                        var Difference = LocalCursorPosition.x - FramePositionLocal.x;
-
-                        ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
-                        //ActiveWindow.transform.localPosition += new Vector3(1f, 0f, 0f) * Difference / 2.0f;
-                        break;
-                    }
-                case "FrameBottom":
-                {
-                        var CursorPosition = Cursor.transform.position;
-                        var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
-                        var FramePositionLocal = ActiveWindow.transform.Find("FrameBottom").transform.localPosition;
-                        var Difference = FramePositionLocal.y - LocalCursorPosition.y;
-
-                        ActiveWindow.transform.localScale += new Vector3(0f, 1f, 0f) * Difference;
-                        //ActiveWindow.transform.localPosition -= new Vector3(0f, 1f, 0f) * Difference / 2.0f;
-                        break;
+                    ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
+                    //ActiveWindow.transform.localPosition += new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                    break;
                 }
+            case "FrameBottom":
+            {
+                    var CursorPosition = Cursor.transform.position;
+                    var LocalCursorPosition = ActiveWindow.transform.InverseTransformPoint(CursorPosition);
+                    var FramePositionLocal = ActiveWindow.transform.Find("FrameBottom").transform.localPosition;
+                    var Difference = FramePositionLocal.y - LocalCursorPosition.y;
+
+                    ActiveWindow.transform.localScale += new Vector3(0f, 1f, 0f) * Difference;
+                    //ActiveWindow.transform.localPosition -= new Vector3(0f, 1f, 0f) * Difference / 2.0f;
+                    break;
             }
         }
+        
     }
 }
