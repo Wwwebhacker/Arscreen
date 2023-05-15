@@ -4,13 +4,14 @@ using System.Drawing;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
-public class CardWall : Window
+public class WindowWall : Window
 {
     // Start is called before the first frame update
     void Start()
     {
         GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-        _savedScaleOfWindow = screen.transform.localScale;
+        _savedScaleOfScreen = screen.transform.localScale;
+
     }
 
     void Update()
@@ -37,13 +38,14 @@ public class CardWall : Window
                 {
                     _minimized = true;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    _savedScaleOfScreen = screen.transform.localScale;
                     screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
                 }
                 else if (_minimized == true)
                 {
                     _minimized = false;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-                    screen.transform.localScale = _savedScaleOfWindow;
+                    screen.transform.localScale = _savedScaleOfScreen;
                 }
                 break;
         }
