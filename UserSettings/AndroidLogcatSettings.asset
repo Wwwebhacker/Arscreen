@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "711KPMZ0636147",
     "m_SelectedPackage": {
-        "deviceId": "711KPMZ0636147",
-        "name": "com.DefaultCompany.ARFOUND",
-        "processId": 32248,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -88,45 +88,33 @@
         },
         {
             "deviceId": "711KPMZ0636147",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 10925,
-            "exited": true
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 22346,
-            "exited": true
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 25030,
-            "exited": true
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 25559,
-            "exited": true
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "com.DefaultCompany.ARFOUND",
-            "processId": 28793,
+            "name": "com.google.android.apps.nexuslauncher",
+            "processId": 12799,
             "exited": false
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 31619,
-            "exited": false
+            "processId": 15688,
+            "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
-            "processId": 32248,
-            "exited": false
+            "processId": 16712,
+            "exited": true
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 17193,
+            "exited": true
+        },
+        {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.DefaultCompany.ARFOUND",
+            "processId": 17879,
+            "exited": true
         },
         {
             "deviceId": "34HDU20228005205",

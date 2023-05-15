@@ -106,7 +106,7 @@ public class CoreController : MonoBehaviour
                         var Difference = FramePositionLocal.x - LocalCursorPosition.x;
 
                         ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
-                        ActiveWindow.transform.localPosition -= new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                        //ActiveWindow.transform.localPosition -= new Vector3(1f, 0f, 0f) * Difference / 2.0f;
                         break;
                     }
                 case "FrameRight":
@@ -117,7 +117,7 @@ public class CoreController : MonoBehaviour
                         var Difference = LocalCursorPosition.x - FramePositionLocal.x;
 
                         ActiveWindow.transform.localScale += new Vector3(1f, 0f, 0f) * Difference;
-                        ActiveWindow.transform.localPosition += new Vector3(1f, 0f, 0f) * Difference / 2.0f;
+                        //ActiveWindow.transform.localPosition += new Vector3(1f, 0f, 0f) * Difference / 2.0f;
                         break;
                     }
                 case "FrameBottom":
@@ -128,7 +128,7 @@ public class CoreController : MonoBehaviour
                         var Difference = FramePositionLocal.y - LocalCursorPosition.y;
 
                         ActiveWindow.transform.localScale += new Vector3(0f, 1f, 0f) * Difference;
-                        ActiveWindow.transform.localPosition -= new Vector3(0f, 1f, 0f) * Difference / 2.0f;
+                        //ActiveWindow.transform.localPosition -= new Vector3(0f, 1f, 0f) * Difference / 2.0f;
                         break;
                 }
             }

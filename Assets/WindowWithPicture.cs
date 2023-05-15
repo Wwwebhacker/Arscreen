@@ -38,13 +38,14 @@ public class WindowWithPicture : Window
                 {
                     _minimized = true;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
+                    _savedScaleOfScreen = screen.transform.localScale;
                     screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
                 }
                 else if (_minimized == true)
                 {
                     _minimized = false;
                     GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-                    screen.transform.localScale = new Vector3(0.45f, 0.25f, 0.01f);
+                    screen.transform.localScale = _savedScaleOfScreen;
                 }
                 break;
         }
