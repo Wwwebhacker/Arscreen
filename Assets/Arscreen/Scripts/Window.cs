@@ -1,6 +1,4 @@
 using System;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -10,7 +8,6 @@ using UnityEngine;
 /// <param name="_savedScaleOfWindow">Saves the scale of window, so it's value can be reset</param>
 public class Window : MonoBehaviour
 {
-    protected bool _minimized;
     protected Vector3 _savedScaleOfWindow = new Vector3(1.0f, 1.0f, 1.0f);
     protected Vector3 _savedScaleOfScreen = new Vector3(0.45f, 0.25f, 0.01f);
     protected GameObject Screen;
@@ -20,7 +17,7 @@ public class Window : MonoBehaviour
     protected GameObject Bar;
 
 
-    protected void Awake()
+    void Awake()
     {
         FrameLeft = transform.Find("FrameLeft").gameObject;
         FrameRight = transform.Find("FrameRight").gameObject;
@@ -30,15 +27,16 @@ public class Window : MonoBehaviour
         _savedScaleOfScreen = Screen.transform.localScale;
     }
 
-    protected virtual void Start()
+    private void Start()
     {
-        
+        gameObject.SetActive(true);
     }
-    
-    protected virtual void Update()
+
+
+    void Update()
     {
         CheckStandardWindowInteractions();
-        CheckStandardWindowButtons();
+        CheckButtons();
     }
 
     /// <summary>
@@ -51,7 +49,7 @@ public class Window : MonoBehaviour
     {
           window = obj;
           if (!obj) return false;
-          while (! obj.TryGetComponent<Window>(out var _))
+          while (! obj.TryGetComponent<Window>(out _))
           {
                if (!obj.transform.parent) return false;
                obj = obj.transform.parent.gameObject;
@@ -91,7 +89,7 @@ public class Window : MonoBehaviour
                     transform.rotation = CoreController.Camera.transform.rotation;
                     break;
             }
-            case "FrameLeft":
+            case "FrameRight":
             {
                 var tmp = Vector3.right * difference.x;
                 onAim.transform.Translate(tmp);
@@ -102,7 +100,7 @@ public class Window : MonoBehaviour
                 }
                 break;
             }
-            case "FrameRight":
+            case "FrameLeft":
             {
                 var tmp = Vector3.right * difference.x;
                 onAim.transform.Translate(tmp);
@@ -119,7 +117,8 @@ public class Window : MonoBehaviour
                 onAim.transform.Translate(tmp);
                 foreach (var elem3 in new GameObject[] { Screen, FrameRight, FrameLeft })
                 {
-                    elem3.transform.localScale += -tmp;
+                    if (elem3 == Screen) elem3.transform.localScale += tmp;
+                    else elem3.transform.localScale -= tmp;
                     elem3.transform.Translate(tmp /2.0f);
                 }
                 break;
@@ -128,18 +127,17 @@ public class Window : MonoBehaviour
         
     }
     
-    private void CheckStandardWindowButtons()
+    private void CheckButtons()
     {
         // Conditions
-        if (CoreController.Instance.ActiveWindow != gameObject) return;
         if(! InputHandler.Clicked()) return;
+        if (CoreController.Instance.ActiveWindow != gameObject) return;
         //
-
         var onAim = CoreController.Instance.Cursor.LastHitInfo.collider.gameObject;
         switch (onAim.name)
         {
             case "CloseWindowButton":
-                Destroy(CoreController.Instance.ActiveWindow);
+                Destroy(gameObject);
                 break;
 
             case "MinimizeWindowButton":

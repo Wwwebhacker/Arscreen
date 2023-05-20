@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class WindowYellow : Window
+public class WindowYellow : MonoBehaviour
 {
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
         CheckButtons();
     }
     private void CheckButtons()

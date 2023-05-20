@@ -6,83 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="e7dce38c-2f29-4b3a-ab6b-176e61d39d2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Arscreen/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArCursor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArCursor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArCursorObject.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArCursorObject.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExampleAssets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BarMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BarMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BrickWall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BrickWall.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/DarkGrey.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/DarkGrey.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/BrickWall.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/BrickWall.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/brickwall 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/brickwall 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WhiteCanvas.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WhiteCanvas.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow Bar.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow Bar.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow Buttons.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow Buttons.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/brickwall 1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/brickwall 1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PanelRotator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PanelRotator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pictures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pictures/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pictures/Materials/the_birth_of_venus.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pictures/Materials/the_birth_of_venus.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pictures/the_birth_of_venus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pictures/the_birth_of_venus.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BlankAR.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BlankAR.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainscene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainscene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Toolbar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Toolbar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WhiteCanvas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WhiteCanvas.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Window.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Window.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWall.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWall.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWall.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPaint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPaint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPaint.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPaint.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPicture.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPicture.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPicture.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowWithPicture.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowYellow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowYellow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowYellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowYellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ar_cursor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ar_cursor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Materials/the_birth_of_venus 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Materials/the_birth_of_venus 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWall.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWall.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPaint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPaint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPaint.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPaint.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPicture.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPicture.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPicture.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowWithPicture.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowYellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowYellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowYellow.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Prefabs/WindowYellow.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scenes/mainscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Scenes/mainscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Scripts/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/Window.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Scripts/Window.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowWall.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowWall.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowWithPaint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowWithPaint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowWithPicture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowWithPicture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowYellow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Scripts/WindowYellow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arscreen/Textures/the_birth_of_venus.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arscreen/Textures/the_birth_of_venus.jpg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,28 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\SaySaeqo\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\SaySaeqo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\SaySaeqo\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\UnityHub\Unity\2021.3.16f1\Editor\Unity.exe" />
@@ -192,7 +136,8 @@
       <workItem from="1683992333542" duration="4888000" />
       <workItem from="1684220637044" duration="1195000" />
       <workItem from="1684504581687" duration="1355000" />
-      <workItem from="1684517481521" duration="20602000" />
+      <workItem from="1684517481521" duration="21391000" />
+      <workItem from="1684579036773" duration="5798000" />
     </task>
     <servers />
   </component>

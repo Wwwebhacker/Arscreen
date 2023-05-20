@@ -13,7 +13,7 @@ using Color = UnityEngine.Color;
 /// <param name="_renderer">?</param>
 /// <param name="_brushSize">Size of the brush used to paint on screen</param>
 /// <param name="_color">Index of a color used to paint on screen</param>
-public class WindowWithPaint : Window
+public class WindowWithPaint : MonoBehaviour
 {
     public Texture2D originalTexture;
     private static readonly Vector2 NO_POINT = Vector2.zero;
@@ -39,10 +39,9 @@ public class WindowWithPaint : Window
     Color.red, Color.blue, Color.green, Color.magenta, Color.yellow, Color.black, Color.white
     };
 
-    protected override void Start()
+    void Start()
     {
-        base.Start();
-        var drawingArea = Screen;
+        var drawingArea = transform.Find("Screen");
         _renderer = drawingArea.GetComponent<Renderer>();
         var copyTexture = new Texture2D(originalTexture.width, originalTexture.height);
         copyTexture.SetPixels(originalTexture.GetPixels());
@@ -51,9 +50,8 @@ public class WindowWithPaint : Window
         _renderer.material.SetTexture("_MainTex", copyTexture);
     }
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
         CheckDrawing();
         CheckStopDrawing();
         CheckButtons();
@@ -128,7 +126,7 @@ public class WindowWithPaint : Window
         if (CoreController.Instance.ActiveWindow != gameObject) return;
         if(! InputHandler.Holding()) return;
         var hit = CoreController.Instance.Cursor.LastHitInfo;
-        if (hit.collider.gameObject != Screen) return;
+        if (hit.collider.name != "Screen") return;
         //if (_tool != Tools.Brush) return;
 
         var tex = _renderer.material.mainTexture as Texture2D;
@@ -163,7 +161,7 @@ public class WindowWithPaint : Window
         if (CoreController.Instance.ActiveWindow != gameObject) return;
         if(! InputHandler.Holding()) return;
         var hit = CoreController.Instance.Cursor.LastHitInfo;
-        if (hit.collider.gameObject != Screen) return;
+        if (hit.collider.name != "Screen") return;
         if (_tool != Tools.Line) return;
         //
         

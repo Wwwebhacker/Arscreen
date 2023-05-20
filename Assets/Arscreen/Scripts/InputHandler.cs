@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InputHandler
 {
-    public const bool IsUsingGestures = true;
+    public const bool IsUsingGestures = false;
     
     public static bool Clicked()
     {
