@@ -336,7 +336,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 492941853}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: c3916a785f129234aa003df7e1faf09b,
@@ -1128,7 +1128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 492941853}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: cebfc475257a33f4e839ce484b073767,
@@ -1325,7 +1325,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 492941853}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: 066c91b1ffbb3f04fb9c25374b2267cb,
@@ -1522,7 +1522,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 492941853}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: f53487419595c964fab3a762cee3aee9,
