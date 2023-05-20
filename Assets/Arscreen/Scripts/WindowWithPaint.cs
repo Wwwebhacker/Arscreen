@@ -39,27 +39,23 @@ public class WindowWithPaint : Window
     Color.red, Color.blue, Color.green, Color.magenta, Color.yellow, Color.black, Color.white
     };
 
-    void Start()
+    protected override void Start()
     {
-        var drawingArea = transform.GetChild(1).gameObject;
+        base.Start();
+        var drawingArea = Screen;
         _renderer = drawingArea.GetComponent<Renderer>();
         var copyTexture = new Texture2D(originalTexture.width, originalTexture.height);
         copyTexture.SetPixels(originalTexture.GetPixels());
         copyTexture.Apply();
         _renderer.material.EnableKeyword("_NORMALMAP");
         _renderer.material.SetTexture("_MainTex", copyTexture);
-
-        GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-        _savedScaleOfWindow = app.ActiveWindow.transform.localScale;
     }
 
-    void Update()
+    protected override void Update()
     {
-        if (_minimized == false)
-        {
-            CheckDrawing();
-            CheckStopDrawing();
-        }
+        base.Update();
+        CheckDrawing();
+        CheckStopDrawing();
         CheckButtons();
     }
 
@@ -79,12 +75,12 @@ public class WindowWithPaint : Window
     private void CheckButtons()
     {
         // Conditions
-        if (app.ActiveWindow != gameObject) return;
-        if(! InputHandler.clicked()) return;
+        if (CoreController.Instance.ActiveWindow != gameObject) return;
+        if(! InputHandler.Clicked()) return;
         //
 
-        var hit = app.Cursor.LastHitInfo;
-        switch (hit.collider.name)
+        var onAim = CoreController.Instance.Cursor.LastHitInfo.collider.gameObject;
+        switch (onAim.name)
         {
             case "Button1": _brushSize++;
                 break;
@@ -92,7 +88,7 @@ public class WindowWithPaint : Window
                 break;
             case "Button3": 
                 _colorIdx = (_colorIdx + 1) % _colorPallet.Length;
-                hit.collider.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = BrushColor;
+                onAim.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = BrushColor;
                 break;
             case "Button4":
                 _tool = _tool switch
@@ -101,7 +97,7 @@ public class WindowWithPaint : Window
                     Tools.Line => Tools.Brush,
                     _ => Tools.Brush
                 };
-                hit.collider.gameObject.transform.GetChild(0).transform.localScale = _tool switch
+                onAim.transform.GetChild(0).transform.localScale = _tool switch
                 {
                     Tools.Brush => new Vector3(0.4f, 0.4f, 1),
                     Tools.Line => new Vector3(0.8f, 0.2f, 1),
@@ -110,28 +106,8 @@ public class WindowWithPaint : Window
                 break;
             case "Button5": 
                 _debug = (_debug + 1) % 4;
-                hit.collider.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().material
+                onAim.transform.GetChild(0).GetComponent<MeshRenderer>().material
                     .color = new Color(0.2f,0.2f,0.2f)*_debug;
-                break;
-
-            case "CloseWindowButton":
-                Destroy(app.ActiveWindow);
-                break;
-
-            case "MinimizeWindowButton":
-                if (_minimized == false)
-                {
-                    _minimized = true;
-                    GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-                    _savedScaleOfScreen = screen.transform.localScale;
-                    screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
-                }
-                else if (_minimized == true)
-                {
-                    _minimized = false;
-                    GameObject screen = app.ActiveWindow.transform.Find("Screen").gameObject;
-                    screen.transform.localScale = _savedScaleOfScreen;
-                }
                 break;
         }
     }
@@ -139,8 +115,8 @@ public class WindowWithPaint : Window
     private void CheckStopDrawing()
     {
         // Conditions
-        if (app.ActiveWindow != gameObject) return;
-        if(InputHandler.holding()) return;
+        if (CoreController.Instance.ActiveWindow != gameObject) return;
+        if(InputHandler.Holding()) return;
         //
         if (_tool == Tools.Line) return;
         _lastPoint = NO_POINT;
@@ -149,10 +125,10 @@ public class WindowWithPaint : Window
     private void CheckDrawing()
     {
         // Conditions
-        if (app.ActiveWindow != gameObject) return;
-        if(! InputHandler.holding()) return;
-        var hit = app.Cursor.LastHitInfo;
-        if (hit.collider.name != "Screen") return;
+        if (CoreController.Instance.ActiveWindow != gameObject) return;
+        if(! InputHandler.Holding()) return;
+        var hit = CoreController.Instance.Cursor.LastHitInfo;
+        if (hit.collider.gameObject != Screen) return;
         //if (_tool != Tools.Brush) return;
 
         var tex = _renderer.material.mainTexture as Texture2D;
@@ -165,13 +141,13 @@ public class WindowWithPaint : Window
             DrawPoint(tex, p);
         else
         {
-            var final_point = p;
+            var finalPoint = p;
             p = _lastPoint;
 
-            for (var i = 0; i < Vector2.Distance(_lastPoint, final_point); i++)
+            for (var i = 0; i < Vector2.Distance(_lastPoint, finalPoint); i++)
             {
                 DrawPoint(tex, p);
-                p = Vector2.MoveTowards(p, final_point, 1);
+                p = Vector2.MoveTowards(p, finalPoint, 1);
             }
             
         }
@@ -184,10 +160,10 @@ public class WindowWithPaint : Window
     private void CheckLineDrawing()
     {
         // Conditions
-        if (app.ActiveWindow != gameObject) return;
-        if(! InputHandler.holding()) return;
-        var hit = app.Cursor.LastHitInfo;
-        if (hit.collider.name != "Screen") return;
+        if (CoreController.Instance.ActiveWindow != gameObject) return;
+        if(! InputHandler.Holding()) return;
+        var hit = CoreController.Instance.Cursor.LastHitInfo;
+        if (hit.collider.gameObject != Screen) return;
         if (_tool != Tools.Line) return;
         //
         

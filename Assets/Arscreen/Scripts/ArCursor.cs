@@ -6,15 +6,9 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ArCursor : MonoBehaviour
 {
-    private CoreController _app;
     public ARRaycastManager raycastManager;
     public RaycastHit LastHitInfo { private set; get; }
 
-    public void Start()
-    {
-        _app = GetComponent<CoreController>();
-    }
-    
     /// <summary>
     /// Raycast in 2 steps:
     /// <list type="number">
@@ -32,27 +26,30 @@ public class ArCursor : MonoBehaviour
     /// </list>
     /// In both cases position and rotation of cursor will be updated.
     /// </summary>
-    /// <returns>True if Window Object of AR plane was hit.</returns>
+    /// <returns>True if Window Object or AR plane was hit.</returns>
     public bool RaycastCursor()
     {
         Ray ray;
-        if (InputHandler.isUsingGestures)
+        if (InputHandler.IsUsingGestures)
         {
             var joints = SkeletonManager.instance._listOfJoints;
-            Vector3 indexFinger = joints[8].transform.position;
-            Vector3 thumbFinger = joints[4].transform.position;
-            Vector3 midPoint = Vector3.Lerp(thumbFinger, indexFinger, 0.5f);
-            Vector3 direction = midPoint - Camera.main.transform.position;
+            const int indexFingerEnd = 8;
+            const int thumbFingerEnd = 4;
+            var indexFinger = joints[indexFingerEnd].transform.position;
+            var thumbFinger = joints[thumbFingerEnd].transform.position;
+            const float center = 0.5f;
+            var midPoint = Vector3.Lerp(thumbFinger, indexFinger, center);
+            var direction = midPoint - CoreController.Camera.transform.position;
             direction.Normalize();
-            ray = new Ray(Camera.main.transform.position, direction);
+            ray = new Ray(CoreController.Camera.transform.position, direction);
         }
         else
         {
-            ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            ray = new Ray(CoreController.Camera.transform.position, CoreController.Camera.transform.forward);
         }
         // 
         
-        float rayLength = 10.0f;
+        const float rayLength = 10.0f;
 
         // check for window hit
         if (Physics.Raycast(ray, 
@@ -64,24 +61,20 @@ public class ArCursor : MonoBehaviour
                 transform.position = LastHitInfo.point + (LastHitInfo.normal * 0.001f);
                 transform.rotation = Quaternion.LookRotation(LastHitInfo.normal);
                 transform.Rotate(new Vector3(-90, 0, 0));
-                _app.ActiveWindow = window;
+                CoreController.Instance.ActiveWindow = window;
                 return true;
             }
-
-            
         }
         
-        _app.ActiveWindow = null;
+        CoreController.Instance.ActiveWindow = null;
         // check for plane hit
         // Vector2 centerOfScreen = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         raycastManager.Raycast(ray, hits, TrackableType.Planes);
-        if (hits.Count > 0)
-        {
-            transform.position = hits[0].pose.position;
-            transform.rotation = hits[0].pose.rotation;
-            return true;
-        }
-        return false;
+        if (hits.Count == 0) return false;
+        
+        transform.position = hits[0].pose.position;
+        transform.rotation = hits[0].pose.rotation;
+        return true;
     }
 }

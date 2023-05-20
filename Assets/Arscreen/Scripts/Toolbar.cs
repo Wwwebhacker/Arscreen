@@ -8,16 +8,10 @@ public class Toolbar : MonoBehaviour
     public bool isPanelClicked = true;
     public GameObject cursor;
     [HideInInspector] public CoreController app;
-
-    void Awake()
+    
+    public void SwitchApp(GameObject window)
     {
-        app = cursor.GetComponent<CoreController>();
-
-    }
-    public void switchApp(GameObject window)
-    {
-        app.emptyWindowPrefab = window;
-
+        CoreController.Instance.emptyWindowPrefab = window;
     }
     
     // Start is called before the first frame update
@@ -35,6 +29,7 @@ public class Toolbar : MonoBehaviour
     public static bool IsPartOfToolbar(GameObject obj)
     {
         if (!obj) return false;
+
 
         while (!obj.TryGetComponent<Toolbar>(out var _))
         {

@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class InputHandler
 {
-    public const bool isUsingGestures = true;
+    public const bool IsUsingGestures = true;
     
-    public static bool clicked()
+    public static bool Clicked()
     {
-        if (isUsingGestures)
+        if (IsUsingGestures)
         {
             ManomotionManager.Instance.ShouldCalculateGestures(true);
             bool result = ManomotionManager.Instance.Hand_infos[0].hand_info.gesture_info
@@ -16,9 +16,9 @@ public class InputHandler
         else return Input.touches.Length > 0 && Input.GetTouch(0).phase == TouchPhase.Began;
     }
 
-    public static bool holding()
+    public static bool Holding()
     {
-        if (isUsingGestures)
+        if (IsUsingGestures)
         {
             ManomotionManager.Instance.ShouldCalculateGestures(true);
             bool result = ManomotionManager.Instance.Hand_infos[0].hand_info.gesture_info

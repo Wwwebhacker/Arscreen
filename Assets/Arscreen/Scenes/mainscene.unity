@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37089851, g: 0.3783701, b: 0.3572253, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -279,7 +279,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &698061236
 GameObject:
@@ -367,7 +367,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 863015789}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: f53487419595c964fab3a762cee3aee9,
@@ -474,7 +474,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &746482338
 GameObject:
@@ -617,7 +617,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 863015789}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: 066c91b1ffbb3f04fb9c25374b2267cb,
@@ -1710,7 +1710,7 @@ Transform:
   m_Children:
   - {fileID: 157089623}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1179032831
 MonoBehaviour:
@@ -2006,7 +2006,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 863015789}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: cebfc475257a33f4e839ce484b073767,
@@ -2388,7 +2388,7 @@ Transform:
   m_Children:
   - {fileID: 1012873192}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1901524773
 GameObject:
@@ -2613,7 +2613,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 863015789}
         m_TargetAssemblyTypeName: Toolbar, Assembly-CSharp
-        m_MethodName: switchApp
+        m_MethodName: SwitchApp
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6508109909461787141, guid: c3916a785f129234aa003df7e1faf09b,
@@ -2662,85 +2662,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911326813}
   m_CullTransparentMesh: 1
---- !u!1001 &1922582499
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4111831609420844689, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.020088928
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844689, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_Parameters.numCornerVertices
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844690, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111831609420844691, guid: 79f57eb7ac9662044893b12e40602b18,
-        type: 3}
-      propertyPath: m_Name
-      value: ContourGizmo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 79f57eb7ac9662044893b12e40602b18, type: 3}
 --- !u!1 &1973319086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +2888,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066190531
 GameObject:
@@ -3063,7 +2984,7 @@ RectTransform:
   m_Children:
   - {fileID: 863015788}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
