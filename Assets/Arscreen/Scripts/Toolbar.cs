@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class Toolbar : MonoBehaviour
 {
     public bool isPanelClicked = true;
-    public GameObject cursor;
     [HideInInspector] public CoreController app;
     
     public void SwitchApp(GameObject window)

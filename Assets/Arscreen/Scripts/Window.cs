@@ -141,18 +141,7 @@ public class Window : MonoBehaviour
                 break;
 
             case "MinimizeWindowButton":
-                Screen.SetActive(!Screen.activeSelf);
-                // if (_minimized == false)
-                // {
-                //     _minimized = true;
-                //     _savedScaleOfScreen = Screen.transform.localScale;
-                //     Screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
-                // }
-                // else if (_minimized == true)
-                // {
-                //     _minimized = false;
-                //     Screen.transform.localScale = _savedScaleOfScreen;
-                // }
+                CoreController.Instance.minimizeHandler.Minimize(this);
                 break;
         }
     }
