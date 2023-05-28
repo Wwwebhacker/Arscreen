@@ -88,6 +88,17 @@ public class CoreController : MonoBehaviour
             cursorPosition.z);
         InstantiateEmptyWindow(windowPosition, Cursor.transform.rotation);
     }
+
+    public Vector3 getPinchMidPoint()
+    {
+        var joints = SkeletonManager.instance._listOfJoints;
+        const int indexFingerEnd = 8;
+        const int thumbFingerEnd = 4;
+        var indexFinger = joints[indexFingerEnd].transform.position;
+        var thumbFinger = joints[thumbFingerEnd].transform.position;
+        const float center = 0.5f;
+        return Vector3.Lerp(thumbFinger, indexFinger, center);
+    }
     
     
 }

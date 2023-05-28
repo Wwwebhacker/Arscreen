@@ -82,7 +82,15 @@ public class Window : MonoBehaviour
         {
             case "Bar":
             {
-                    var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
+                    Vector3 newPos;
+                    if (InputHandler.IsUsingGestures)
+                    {
+                        newPos = CoreController.Instance.getPinchMidPoint();
+                    } else
+                    {
+                        newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
+                    }
+
                     var p = onAim.transform.position - transform.position;
             
                     transform.position = newPos - p;
