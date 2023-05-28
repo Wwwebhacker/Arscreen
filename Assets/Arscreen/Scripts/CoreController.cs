@@ -10,6 +10,7 @@ public class CoreController : MonoBehaviour
     
     public GameObject emptyWindowPrefab;
     public GameObject textObject;
+    public MinimizeHandler minimizeHandler;
     public static CoreController Instance { get; private set; }
 
     public static Camera Camera { get; private set; }
