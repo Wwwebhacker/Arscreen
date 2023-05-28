@@ -8,14 +8,14 @@ using UnityEngine;
 /// <param name="_savedScaleOfWindow">Saves the scale of window, so it's value can be reset</param>
 public class Window : MonoBehaviour
 {
-    protected Vector3 _savedScaleOfWindow = new Vector3(1.0f, 1.0f, 1.0f);
-    protected Vector3 _savedScaleOfScreen = new Vector3(0.45f, 0.25f, 0.01f);
     protected GameObject Screen;
     protected GameObject FrameLeft;
     protected GameObject FrameRight;
     protected GameObject FrameBottom;
     protected GameObject Bar;
 
+    protected GameObject CloseWindowButton; //ewentualnie mozna zastapic obiektem na ktorym znajdowaly by sie przyciski
+    protected GameObject MinimizeWindowButton;
 
     void Awake()
     {
@@ -24,19 +24,20 @@ public class Window : MonoBehaviour
         FrameBottom = transform.Find("FrameBottom").gameObject;
         Bar = transform.Find("Bar").gameObject;
         Screen = transform.Find("Screen").gameObject;
-        _savedScaleOfScreen = Screen.transform.localScale;
+
+        CloseWindowButton = transform.Find("CloseWindowButton").gameObject;
+        MinimizeWindowButton = transform.Find("MinimizeWindowButton").gameObject;
     }
 
-    private void Start()
+    protected void Start()
     {
         gameObject.SetActive(true);
     }
 
-
-    void Update()
+    protected void Update()
     {
-        CheckStandardWindowInteractions();
-        CheckButtons();
+        this.CheckStandardWindowInteractions();
+        this.CheckButtons();
     }
 
     /// <summary>
@@ -66,13 +67,11 @@ public class Window : MonoBehaviour
     /// <item> move when holding Window Bar</item>
     /// </list>
     /// </summary>
-    private void CheckStandardWindowInteractions()
+    protected void CheckStandardWindowInteractions()
     {
-        if (CoreController.Instance.ActiveWindow != gameObject) return;
-        if (!InputHandler.Holding()) return;
-        var onAim = CoreController.Instance.Cursor.LastHitInfo.collider.gameObject;
-        
+        if (this.CheckConditionsForStandardWindowInteractions() == false) return;
 
+        var onAim = CoreController.Instance.Cursor.LastHitInfo.collider.gameObject;
         var cursorPosition = CoreController.Instance.Cursor.transform.position;
         var localCursorPosition = transform.InverseTransformPoint(cursorPosition);
         var localFramePosition = onAim.transform.localPosition;
@@ -81,59 +80,58 @@ public class Window : MonoBehaviour
         switch (onAim.name)
         {
             case "Bar":
-            {
+                {
                     var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
                     var p = onAim.transform.position - transform.position;
-            
                     transform.position = newPos - p;
                     transform.rotation = CoreController.Camera.transform.rotation;
                     break;
-            }
-            case "FrameRight":
-            {
-                var tmp = Vector3.right * difference.x;
-                onAim.transform.Translate(tmp);
-                foreach (var elem1 in new GameObject[] { Screen, FrameBottom, Bar })
-                {
-                    elem1.transform.localScale -= tmp;
-                    elem1.transform.Translate(tmp / 2.0f);
                 }
-                break;
-            }
             case "FrameLeft":
-            {
-                var tmp = Vector3.right * difference.x;
-                onAim.transform.Translate(tmp);
-                foreach (var elem2 in new GameObject[] { Screen, FrameBottom, Bar })
                 {
-                    elem2.transform.localScale += tmp;
-                    elem2.transform.Translate(tmp / 2.0f);
+                    var tmp = Vector3.right * difference.x;
+                    onAim.transform.Translate(tmp);
+                    foreach (var element in new GameObject[] { Screen, FrameBottom, Bar})
+                    {
+                        element.transform.localScale -= tmp;
+                        element.transform.Translate(tmp / 2.0f);
+                    }
+                    break;
                 }
-                break;
+            case "FrameRight":
+                {
+                    var tmp = Vector3.right * difference.x;
+                    onAim.transform.Translate(tmp);
+                    foreach (var element in new GameObject[] { Screen, FrameBottom, Bar })
+                    {
+                        element.transform.localScale += tmp;
+                        element.transform.Translate(tmp / 2.0f);
+                    }
+                    transform.Find("CloseWindowButton").gameObject.transform.Translate(tmp);
+                    transform.Find("MinimizeWindowButton").gameObject.transform.Translate(tmp);
+                    break;
                 }
             case "FrameBottom":
-            {
-                var tmp = Vector3.up * difference.y;
-                onAim.transform.Translate(tmp);
-                foreach (var elem3 in new GameObject[] { Screen, FrameRight, FrameLeft })
                 {
-                    if (elem3 == Screen) elem3.transform.localScale += tmp;
-                    else elem3.transform.localScale -= tmp;
-                    elem3.transform.Translate(tmp /2.0f);
+                    var tmp = Vector3.up * difference.y;
+                    onAim.transform.Translate(tmp);
+                    foreach (var element in new GameObject[] { Screen, FrameRight, FrameLeft })
+                    {
+                        if (element == Screen) element.transform.localScale += tmp;
+                        else element.transform.localScale -= tmp;
+                        element.transform.Translate(tmp /2.0f);
+                    }
+                    break;
                 }
-                break;
-            }
         }
-        
     }
-    
-    private void CheckButtons()
+
+    protected void CheckButtons()
     {
-        // Conditions
-        if(! InputHandler.Clicked()) return;
-        if (CoreController.Instance.ActiveWindow != gameObject) return;
-        //
+        if (this.CheckConditionsForButtons() == false) return;
+
         var onAim = CoreController.Instance.Cursor.LastHitInfo.collider.gameObject;
+
         switch (onAim.name)
         {
             case "CloseWindowButton":
@@ -141,19 +139,25 @@ public class Window : MonoBehaviour
                 break;
 
             case "MinimizeWindowButton":
-                Screen.SetActive(!Screen.activeSelf);
-                // if (_minimized == false)
-                // {
-                //     _minimized = true;
-                //     _savedScaleOfScreen = Screen.transform.localScale;
-                //     Screen.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
-                // }
-                // else if (_minimized == true)
-                // {
-                //     _minimized = false;
-                //     Screen.transform.localScale = _savedScaleOfScreen;
-                // }
+                if (Screen != null) Screen.SetActive(!Screen.activeSelf);
+                if (FrameLeft != null) FrameLeft.SetActive(!FrameLeft.activeSelf);
+                if (FrameRight != null) FrameRight.SetActive(!FrameRight.activeSelf);
+                if (FrameBottom != null) FrameBottom.SetActive(!FrameBottom.activeSelf);
                 break;
         }
+    }
+
+    protected bool CheckConditionsForButtons()
+    {
+        if (CoreController.Instance.ActiveWindow != gameObject) return false;
+        if (!InputHandler.Clicked()) return false;
+        return true;
+    }
+
+    protected bool CheckConditionsForStandardWindowInteractions()
+    {
+        if (CoreController.Instance.ActiveWindow != gameObject) return false;
+        if (!InputHandler.Holding()) return false;
+        return true;
     }
 }

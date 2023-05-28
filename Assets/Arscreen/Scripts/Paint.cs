@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
@@ -13,7 +10,7 @@ using Color = UnityEngine.Color;
 /// <param name="_renderer">?</param>
 /// <param name="_brushSize">Size of the brush used to paint on screen</param>
 /// <param name="_color">Index of a color used to paint on screen</param>
-public class WindowWithPaint : MonoBehaviour
+public class Paint : MonoBehaviour
 {
     public Texture2D originalTexture;
     private static readonly Vector2 NO_POINT = Vector2.zero;
@@ -74,7 +71,7 @@ public class WindowWithPaint : MonoBehaviour
     {
         // Conditions
         if (CoreController.Instance.ActiveWindow != gameObject) return;
-        if(! InputHandler.Clicked()) return;
+        if (!InputHandler.Clicked()) return;
         //
 
         var onAim = CoreController.Instance.Cursor.LastHitInfo.collider.gameObject;
@@ -114,7 +111,7 @@ public class WindowWithPaint : MonoBehaviour
     {
         // Conditions
         if (CoreController.Instance.ActiveWindow != gameObject) return;
-        if(InputHandler.Holding()) return;
+        if (InputHandler.Holding()) return;
         //
         if (_tool == Tools.Line) return;
         _lastPoint = NO_POINT;
@@ -124,7 +121,7 @@ public class WindowWithPaint : MonoBehaviour
     {
         // Conditions
         if (CoreController.Instance.ActiveWindow != gameObject) return;
-        if(! InputHandler.Holding()) return;
+        if (!InputHandler.Holding()) return;
         var hit = CoreController.Instance.Cursor.LastHitInfo;
         if (hit.collider.name != "Screen") return;
         //if (_tool != Tools.Brush) return;
@@ -147,19 +144,16 @@ public class WindowWithPaint : MonoBehaviour
                 DrawPoint(tex, p);
                 p = Vector2.MoveTowards(p, finalPoint, 1);
             }
-            
         }
-
         _lastPoint = p;
         tex.Apply();
-        
     }
 
     private void CheckLineDrawing()
     {
         // Conditions
         if (CoreController.Instance.ActiveWindow != gameObject) return;
-        if(! InputHandler.Holding()) return;
+        if (!InputHandler.Holding()) return;
         var hit = CoreController.Instance.Cursor.LastHitInfo;
         if (hit.collider.name != "Screen") return;
         if (_tool != Tools.Line) return;
