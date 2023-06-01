@@ -10,7 +10,8 @@ public class WindowYellow : Window
     new void Update()
     {
         this.CheckStandardWindowInteractions();
-        this.CheckButtons();
+        base.CheckButtons();
+        this.CheckYellowWindowButtons();
     }
 
     new protected void CheckStandardWindowInteractions()
@@ -26,7 +27,7 @@ public class WindowYellow : Window
         switch (onAim.name)
         {
             case "Bar":
-                this.HandleBar(onAim, difference);
+                this.HandleBar(onAim);
                 break;
             case "FrameLeft":
                 base.HandleLeftFrame(onAim, difference);
@@ -40,14 +41,17 @@ public class WindowYellow : Window
         }
     }
 
-    protected void HandleBar(GameObject onAim, Vector3 difference)
+    new protected void HandleBar(GameObject onAim)
     {
         if (attachedToWall == false)
         {
+            /*
             var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
             var p = onAim.transform.position - transform.position;
             transform.position = newPos - p;
             transform.rotation = CoreController.Camera.transform.rotation;
+            */
+            base.HandleBar(onAim);
         }
         else
         {
@@ -60,8 +64,7 @@ public class WindowYellow : Window
         }
     }
 
-
-    new private void CheckButtons()
+    private void CheckYellowWindowButtons()
     {
         if (base.CheckConditionsForButtons() == false) return;
 
@@ -69,14 +72,6 @@ public class WindowYellow : Window
 
         switch (onAim.name)
         {
-            case "CloseWindowButton":
-                Destroy(gameObject);
-                break;
-
-            case "MinimizeWindowButton":
-                Screen.SetActive(!Screen.activeSelf);
-                break;
-
             case "ChangeColourButton":
                 //TODO dodac zmiane kolorow kartek
                 break;
@@ -93,8 +88,6 @@ public class WindowYellow : Window
                 break;
         }
     }
-
-
 
     private void OnTriggerEnter(Collider other)
     {

@@ -117,6 +117,12 @@
             "exited": true
         },
         {
+            "deviceId": "711KPMZ0636147",
+            "name": "com.google.android.youtube",
+            "processId": 6078,
+            "exited": false
+        },
+        {
             "deviceId": "34HDU20228005205",
             "name": "com.DefaultCompany.ARFOUND",
             "processId": 30748,

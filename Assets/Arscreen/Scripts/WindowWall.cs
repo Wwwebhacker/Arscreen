@@ -19,11 +19,12 @@ public class WindowWall : Window
         switch (onAim.name)
         {
             case "CloseWindowButton":
-                Destroy(gameObject);
+                onDestroyButtonClick();
                 break;
 
             case "MinimizeWindowButton":
-                if (Screen != null) Screen.SetActive(!Screen.activeSelf);
+                //if (Screen != null) Screen.SetActive(!Screen.activeSelf);
+                onMinimizeButtonClick();
                 break;
         }
     }

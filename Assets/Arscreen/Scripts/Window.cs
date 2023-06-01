@@ -97,8 +97,25 @@ public class Window : MonoBehaviour
 
     protected void HandleBar(GameObject onAim)
     {
+        /*
         var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
         var p = onAim.transform.position - transform.position;
+        transform.position = newPos - p;
+        transform.rotation = CoreController.Camera.transform.rotation;
+        */
+
+        Vector3 newPos;
+        if (InputHandler.IsUsingGestures) 
+        {
+            newPos = CoreController.Instance.getPinchMidPoint();
+        }
+        else 
+        {
+            newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
+        }
+
+        var p = onAim.transform.position - transform.position;
+
         transform.position = newPos - p;
         transform.rotation = CoreController.Camera.transform.rotation;
     }
@@ -149,17 +166,31 @@ public class Window : MonoBehaviour
         switch (onAim.name)
         {
             case "CloseWindowButton":
-                Destroy(gameObject);
+                onDestroyButtonClick();
                 break;
 
             case "MinimizeWindowButton":
-                if (Screen != null) Screen.SetActive(!Screen.activeSelf);
-                if (FrameLeft != null) FrameLeft.SetActive(!FrameLeft.activeSelf);
-                if (FrameRight != null) FrameRight.SetActive(!FrameRight.activeSelf);
-                if (FrameBottom != null) FrameBottom.SetActive(!FrameBottom.activeSelf);
+                onMinimizeButtonClick();
                 break;
         }
     }
+
+    protected void onDestroyButtonClick()
+    {
+        Destroy(gameObject);
+    }
+
+    protected void onMinimizeButtonClick()
+    {
+        /*
+        if (Screen != null) Screen.SetActive(!Screen.activeSelf);
+        if (FrameLeft != null) FrameLeft.SetActive(!FrameLeft.activeSelf);
+        if (FrameRight != null) FrameRight.SetActive(!FrameRight.activeSelf);
+        if (FrameBottom != null) FrameBottom.SetActive(!FrameBottom.activeSelf);
+        */
+        CoreController.Instance.minimizeHandler.Minimize(this);
+    }
+
 
     protected bool CheckConditionsForButtons()
     {
@@ -174,4 +205,5 @@ public class Window : MonoBehaviour
         if (!InputHandler.Holding()) return false;
         return true;
     }
+
 }

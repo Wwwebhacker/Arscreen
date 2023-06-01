@@ -10,6 +10,7 @@ public class CoreController : MonoBehaviour
     
     public GameObject emptyWindowPrefab;
     public GameObject textObject;
+    public MinimizeHandler minimizeHandler;
     public static CoreController Instance { get; private set; }
 
     public static Camera Camera { get; private set; }
@@ -86,6 +87,17 @@ public class CoreController : MonoBehaviour
         var windowPosition = new Vector3(cursorPosition.x, Camera.transform.position.y,
             cursorPosition.z);
         InstantiateEmptyWindow(windowPosition, Cursor.transform.rotation);
+    }
+
+    public Vector3 getPinchMidPoint()
+    {
+        var joints = SkeletonManager.instance._listOfJoints;
+        const int indexFingerEnd = 8;
+        const int thumbFingerEnd = 4;
+        var indexFinger = joints[indexFingerEnd].transform.position;
+        var thumbFinger = joints[thumbFingerEnd].transform.position;
+        const float center = 0.5f;
+        return Vector3.Lerp(thumbFinger, indexFinger, center);
     }
     
     

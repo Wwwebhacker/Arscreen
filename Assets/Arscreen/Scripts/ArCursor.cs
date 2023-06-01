@@ -32,13 +32,7 @@ public class ArCursor : MonoBehaviour
         Ray ray;
         if (InputHandler.IsUsingGestures)
         {
-            var joints = SkeletonManager.instance._listOfJoints;
-            const int indexFingerEnd = 8;
-            const int thumbFingerEnd = 4;
-            var indexFinger = joints[indexFingerEnd].transform.position;
-            var thumbFinger = joints[thumbFingerEnd].transform.position;
-            const float center = 0.5f;
-            var midPoint = Vector3.Lerp(thumbFinger, indexFinger, center);
+            var midPoint = CoreController.Instance.getPinchMidPoint();
             var direction = midPoint - CoreController.Camera.transform.position;
             direction.Normalize();
             ray = new Ray(CoreController.Camera.transform.position, direction);
