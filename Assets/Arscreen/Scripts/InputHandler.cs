@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class InputHandler
 {
-    public const bool IsUsingGestures = false;
+    //change this to allow using gestures!
+    public const bool IsUsingGestures = true;
     
     public static bool Clicked()
     {
