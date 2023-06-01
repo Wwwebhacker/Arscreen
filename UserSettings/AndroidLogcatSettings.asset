@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "711KPMZ0636147",
     "m_SelectedPackage": {
-        "deviceId": "711KPMZ0636147",
-        "name": "pl.edu.pg.arscreen",
-        "processId": 2297,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -95,12 +95,6 @@
         {
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
-            "processId": 30610,
-            "exited": true
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "pl.edu.pg.arscreen",
             "processId": 31579,
             "exited": true
         },
@@ -120,7 +114,7 @@
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
             "processId": 2297,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "34HDU20228005205",

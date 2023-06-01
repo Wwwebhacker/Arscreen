@@ -84,9 +84,9 @@ public class WindowYellow : Window
             case "DetachButton":
                 if (attachedToWall == true)
                 {
-                    transform.localScale *= 2; //zrobic samo transform bez active window instance i tak dalej
-                    transform.localPosition -= new Vector3(0, 0, -0.25f);
-                    transform.parent = null; //SPRAWDZIC CZY DOBRZE
+                    transform.localScale *= 2;
+                    transform.localPosition -= new Vector3(0, 0, 0.5f);
+                    transform.parent = null;
                     attachedToWall = false;
                     transform.Find("DetachButton").gameObject.SetActive(false);
                 }
