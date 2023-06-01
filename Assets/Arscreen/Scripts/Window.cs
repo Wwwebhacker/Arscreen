@@ -14,6 +14,7 @@ public class Window : MonoBehaviour
     protected GameObject FrameBottom;
     protected GameObject Bar;
 
+
     protected GameObject CloseWindowButton; //ewentualnie mozna zastapic obiektem na ktorym znajdowaly by sie przyciski
     protected GameObject MinimizeWindowButton;
 
@@ -24,7 +25,7 @@ public class Window : MonoBehaviour
         FrameBottom = transform.Find("FrameBottom").gameObject;
         Bar = transform.Find("Bar").gameObject;
         Screen = transform.Find("Screen").gameObject;
-
+        
         CloseWindowButton = transform.Find("CloseWindowButton").gameObject;
         MinimizeWindowButton = transform.Find("MinimizeWindowButton").gameObject;
     }
@@ -80,51 +81,64 @@ public class Window : MonoBehaviour
         switch (onAim.name)
         {
             case "Bar":
-                {
-                    var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
-                    var p = onAim.transform.position - transform.position;
-                    transform.position = newPos - p;
-                    transform.rotation = CoreController.Camera.transform.rotation;
-                    break;
-                }
+                HandleBar(onAim);
+                break;
             case "FrameLeft":
-                {
-                    var tmp = Vector3.right * difference.x;
-                    onAim.transform.Translate(tmp);
-                    foreach (var element in new GameObject[] { Screen, FrameBottom, Bar})
-                    {
-                        element.transform.localScale -= tmp;
-                        element.transform.Translate(tmp / 2.0f);
-                    }
-                    break;
-                }
+                HandleLeftFrame(onAim, difference);
+                break;
             case "FrameRight":
-                {
-                    var tmp = Vector3.right * difference.x;
-                    onAim.transform.Translate(tmp);
-                    foreach (var element in new GameObject[] { Screen, FrameBottom, Bar })
-                    {
-                        element.transform.localScale += tmp;
-                        element.transform.Translate(tmp / 2.0f);
-                    }
-                    transform.Find("CloseWindowButton").gameObject.transform.Translate(tmp);
-                    transform.Find("MinimizeWindowButton").gameObject.transform.Translate(tmp);
-                    break;
-                }
+                HandleRightFrame(onAim, difference);
+                break;
             case "FrameBottom":
-                {
-                    var tmp = Vector3.up * difference.y;
-                    onAim.transform.Translate(tmp);
-                    foreach (var element in new GameObject[] { Screen, FrameRight, FrameLeft })
-                    {
-                        if (element == Screen) element.transform.localScale += tmp;
-                        else element.transform.localScale -= tmp;
-                        element.transform.Translate(tmp /2.0f);
-                    }
-                    break;
-                }
+                HandleFrameBottom(onAim, difference);
+                break;
         }
     }
+
+    protected void HandleBar(GameObject onAim)
+    {
+        var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
+        var p = onAim.transform.position - transform.position;
+        transform.position = newPos - p;
+        transform.rotation = CoreController.Camera.transform.rotation;
+    }
+
+    protected void HandleLeftFrame(GameObject onAim, Vector3 difference)
+    {
+        var tmp = Vector3.right * difference.x;
+        onAim.transform.Translate(tmp);
+        foreach (var element in new GameObject[] { Screen, FrameBottom, Bar })
+        {
+            element.transform.localScale -= tmp;
+            element.transform.Translate(tmp / 2.0f);
+        }
+    }
+
+    protected void HandleRightFrame(GameObject onAim, Vector3 difference)
+    {
+        var tmp = Vector3.right * difference.x;
+        onAim.transform.Translate(tmp);
+        foreach (var element in new GameObject[] { Screen, FrameBottom, Bar })
+        {
+            element.transform.localScale += tmp;
+            element.transform.Translate(tmp / 2.0f);
+        }
+        transform.Find("CloseWindowButton").gameObject.transform.Translate(tmp);
+        transform.Find("MinimizeWindowButton").gameObject.transform.Translate(tmp);
+    }
+
+    protected void HandleFrameBottom(GameObject onAim, Vector3 difference)
+    {
+        var tmp = Vector3.up * difference.y;
+        onAim.transform.Translate(tmp);
+        foreach (var element in new GameObject[] { Screen, FrameRight, FrameLeft })
+        {
+            if (element == Screen) element.transform.localScale += tmp;
+            else element.transform.localScale -= tmp;
+            element.transform.Translate(tmp / 2.0f);
+        }
+    }
+
 
     protected void CheckButtons()
     {

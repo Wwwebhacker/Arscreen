@@ -26,66 +26,40 @@ public class WindowYellow : Window
         switch (onAim.name)
         {
             case "Bar":
-                {
-                    if (attachedToWall == false)
-                    {
-                        var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
-                        var p = onAim.transform.position - transform.position;
-                        transform.position = newPos - p;
-                        transform.rotation = CoreController.Camera.transform.rotation;
-                    }
-                    else
-                    {
-                        //onAim.transform.localPosition = new Vector3(localCursorPosition.x, localCursorPosition.y, -0.025f); // -dziala idealnie ale trzeba caly obiekt a nie sam bar
-
-                        //werja oparta o 
-                        var tmpX = Vector3.right * difference.x;
-                        var tmpY = Vector3.up * difference.y;
-
-                        transform.Translate(tmpX + tmpY);
-                        //transform.localPosition += tmpX + tmpY;
-                        //transform.position += tmpX +tmpY;
-                    }
-                    break;
-                }
+                this.HandleBar(onAim, difference);
+                break;
             case "FrameLeft":
-                {
-                    var tmp = Vector3.right * difference.x;
-                    onAim.transform.Translate(tmp);
-                    foreach (var element in new GameObject[] { Screen, FrameBottom, Bar })
-                    {
-                        element.transform.localScale -= tmp;
-                        element.transform.Translate(tmp / 2.0f);
-                    }
-                    break;
-                }
+                base.HandleLeftFrame(onAim, difference);
+                break;
             case "FrameRight":
-                {
-                    var tmp = Vector3.right * difference.x;
-                    onAim.transform.Translate(tmp);
-                    foreach (var element in new GameObject[] { Screen, FrameBottom, Bar })
-                    {
-                        element.transform.localScale += tmp;
-                        element.transform.Translate(tmp / 2.0f);
-                    }
-                    transform.Find("CloseWindowButton").gameObject.transform.Translate(tmp);
-                    transform.Find("MinimizeWindowButton").gameObject.transform.Translate(tmp);
-                    break;
-                }
+                base.HandleRightFrame(onAim, difference);
+                break;
             case "FrameBottom":
-                {
-                    var tmp = Vector3.up * difference.y;
-                    onAim.transform.Translate(tmp);
-                    foreach (var element in new GameObject[] { Screen, FrameRight, FrameLeft })
-                    {
-                        if (element == Screen) element.transform.localScale += tmp;
-                        else element.transform.localScale -= tmp;
-                        element.transform.Translate(tmp / 2.0f);
-                    }
-                    break;
-                }
+                base.HandleFrameBottom(onAim, difference);
+                break;
         }
     }
+
+    protected void HandleBar(GameObject onAim, Vector3 difference)
+    {
+        if (attachedToWall == false)
+        {
+            var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
+            var p = onAim.transform.position - transform.position;
+            transform.position = newPos - p;
+            transform.rotation = CoreController.Camera.transform.rotation;
+        }
+        else
+        {
+            var cursorPosition = CoreController.Instance.Cursor.transform.position;
+            var wallCursorPosition = transform.parent.transform.InverseTransformPoint(cursorPosition);
+            var wallBarPosition = transform.parent.transform.InverseTransformPoint(onAim.transform.position);
+            var walloffset = wallBarPosition - transform.localPosition;
+
+            transform.localPosition = Vector3.right * wallCursorPosition.x + Vector3.up * (wallCursorPosition.y - walloffset.y) + Vector3.forward * transform.localPosition.z;
+        }
+    }
+
 
     new private void CheckButtons()
     {
@@ -107,20 +81,20 @@ public class WindowYellow : Window
                 //TODO dodac zmiane kolorow kartek
                 break;
 
-            //zamienic na nowy przycisk ktory
-            case "WallButton":
+            case "DetachButton":
                 if (attachedToWall == true)
                 {
-                    transform.parent = null; //SPRAWDZIC CZY DOBRZE
                     transform.localScale *= 2; //zrobic samo transform bez active window instance i tak dalej
-                    transform.position -= new Vector3(0,0,-0.25f);
-                    //remove the new button
+                    transform.localPosition -= new Vector3(0, 0, -0.25f);
+                    transform.parent = null; //SPRAWDZIC CZY DOBRZE
+                    attachedToWall = false;
+                    transform.Find("DetachButton").gameObject.SetActive(false);
                 }
-                //onAim.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = new Color(255.0f, 0.0f, 0.0f);
-                //Debug.Log("TEST");
                 break;
         }
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -137,6 +111,8 @@ public class WindowYellow : Window
                 CoreController.Instance.ActiveWindow.transform.localPosition = new Vector3(0, 0, -0.025f);
                 CoreController.Instance.ActiveWindow.transform.rotation = Quaternion.identity;
                 CoreController.Instance.ActiveWindow.transform.rotation = other.gameObject.transform.rotation;
+
+                transform.Find("DetachButton").gameObject.SetActive(true);
             }
         }
     }

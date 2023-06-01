@@ -10,7 +10,6 @@ public class WindowWall : Window
         CheckButtons();
     }
 
-
     new protected void CheckButtons()
     {
         if (base.CheckConditionsForButtons() == false) return;

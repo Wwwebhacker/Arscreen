@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "711KPMZ0636147",
         "name": "pl.edu.pg.arscreen",
-        "processId": 26353,
+        "processId": 2297,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -89,55 +89,37 @@
         {
             "deviceId": "711KPMZ0636147",
             "name": "com.google.android.apps.nexuslauncher",
-            "processId": 2359,
+            "processId": 2324,
             "exited": false
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
-            "processId": 29649,
+            "processId": 30610,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
-            "processId": 1541,
+            "processId": 31579,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
-            "processId": 2230,
-            "exited": true
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "com.google.android.youtube",
-            "processId": 3046,
-            "exited": false
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 21928,
+            "processId": 32125,
             "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
-            "processId": 22544,
-            "exited": false
+            "processId": 957,
+            "exited": true
         },
         {
             "deviceId": "711KPMZ0636147",
             "name": "pl.edu.pg.arscreen",
-            "processId": 23348,
-            "exited": false
-        },
-        {
-            "deviceId": "711KPMZ0636147",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 26353,
+            "processId": 2297,
             "exited": false
         },
         {
