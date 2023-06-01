@@ -23919,8 +23919,20 @@ struct Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24  : public MonoBehaviour
 {
 	// System.Boolean Toolbar::isPanelClicked
 	bool ___isPanelClicked_4;
+	// UnityEngine.UI.Button Toolbar::switchAppButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___switchAppButton_5;
+	// UnityEngine.GameObject Toolbar::appsPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___appsPanel_6;
 	// CoreController Toolbar::app
-	CoreController_tA50FB50B7220D3DF7BEDDC37590E14BD33F29C4B* ___app_5;
+	CoreController_tA50FB50B7220D3DF7BEDDC37590E14BD33F29C4B* ___app_7;
+	// MinimizeHandler Toolbar::minimizeHandler
+	MinimizeHandler_t3E0365691CF5A01369CE5758846B0C1C2C0A0D6B* ___minimizeHandler_8;
+	// System.Boolean Toolbar::isVerticalPanelHidden
+	bool ___isVerticalPanelHidden_9;
+	// UnityEngine.GameObject Toolbar::defaultAppWindow
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___defaultAppWindow_10;
+	// System.Collections.Generic.Dictionary`2<System.String,System.String> Toolbar::map
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___map_11;
 };
 
 // TriggerGizmo
@@ -44076,9 +44088,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5108[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5109[2] = 
 {
 	static_cast<int32_t>(offsetof(MinimizeHandler_t3E0365691CF5A01369CE5758846B0C1C2C0A0D6B, ___map_4)),static_cast<int32_t>(offsetof(MinimizeHandler_t3E0365691CF5A01369CE5758846B0C1C2C0A0D6B, ___windows_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5111[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5111[8] = 
 {
-	static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___isPanelClicked_4)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___app_5)),};
+	static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___isPanelClicked_4)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___switchAppButton_5)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___appsPanel_6)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___app_7)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___minimizeHandler_8)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___isVerticalPanelHidden_9)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___defaultAppWindow_10)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___map_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5112[7] = 
 {
 	static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ____savedScaleOfWindow_4)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ____savedScaleOfScreen_5)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___Screen_6)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameLeft_7)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameRight_8)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameBottom_9)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___Bar_10)),};
