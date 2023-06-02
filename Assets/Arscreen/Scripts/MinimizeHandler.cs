@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,7 +16,10 @@ public class MinimizeHandler : MonoBehaviour
         { "WindowYellow(Clone)", "Card"},
         { "WindowWall(Clone)", "Wall"}
     };
-
+    public Dictionary<string, string> getMap()
+    {
+        return map;
+    }
     private List<Window> windows = new List<Window>();
 
 

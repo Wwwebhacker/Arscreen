@@ -19,6 +19,16 @@ public class CoreController : MonoBehaviour
     //public GameObject wallObject; 
 
     [HideInInspector]
+
+    public string GetWindowPrefabName()
+    {
+        if(emptyWindowPrefab != null)
+        {
+            return emptyWindowPrefab.name;
+        }
+        return "No Window Name";
+
+    }
     public GameObject ActiveWindow
     {
         get => _activeWindow;
