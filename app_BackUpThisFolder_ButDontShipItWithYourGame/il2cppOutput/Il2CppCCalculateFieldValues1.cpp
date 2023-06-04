@@ -24128,6 +24128,8 @@ struct Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA  : public MonoBehaviour_
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___CloseWindowButton_9;
 	// UnityEngine.GameObject Window::MinimizeWindowButton
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___MinimizeWindowButton_10;
+	// UnityEngine.GameObject Window::HideWindowButton
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___HideWindowButton_11;
 };
 
 // WristInfoGizmo
@@ -25029,7 +25031,15 @@ struct Variables_t979F11193339E481B9E22E6D207F8B37882F07E5  : public LudiqBehavi
 struct WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4  : public Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA
 {
 	// System.Boolean WindowYellow::attachedToWall
-	bool ___attachedToWall_11;
+	bool ___attachedToWall_12;
+	// System.Int32 WindowYellow::ColorIndex
+	int32_t ___ColorIndex_13;
+	// UnityEngine.Material[] WindowYellow::ScreenColorMaterial
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___ScreenColorMaterial_14;
+	// UnityEngine.Material[] WindowYellow::BarColorMaterial
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___BarColorMaterial_15;
+	// UnityEngine.Material[] WindowYellow::ButtonsColorMaterial
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___ButtonsColorMaterial_16;
 };
 
 // UnityEngine.InputSystem.XR.XRControllerWithRumble
@@ -44108,12 +44118,12 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5111[9] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5113[8] = 
 {
 	static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___isPanelClicked_4)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___switchAppButton_5)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___appsPanel_6)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___app_7)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___minimizeHandler_8)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___isVerticalPanelHidden_9)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___defaultAppWindow_10)),static_cast<int32_t>(offsetof(Toolbar_t77BCFC1A4026474DCA354048DC25468AF1FABA24, ___map_11)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5114[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5114[8] = 
 {
-	static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___Screen_4)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameLeft_5)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameRight_6)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameBottom_7)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___Bar_8)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___CloseWindowButton_9)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___MinimizeWindowButton_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5116[1] = 
+	static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___Screen_4)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameLeft_5)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameRight_6)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___FrameBottom_7)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___Bar_8)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___CloseWindowButton_9)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___MinimizeWindowButton_10)),static_cast<int32_t>(offsetof(Window_t5ED82E683F7398E9F458E7430DE0DF9649D1C7CA, ___HideWindowButton_11)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5116[5] = 
 {
-	static_cast<int32_t>(offsetof(WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4, ___attachedToWall_11)),};
+	static_cast<int32_t>(offsetof(WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4, ___attachedToWall_12)),static_cast<int32_t>(offsetof(WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4, ___ColorIndex_13)),static_cast<int32_t>(offsetof(WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4, ___ScreenColorMaterial_14)),static_cast<int32_t>(offsetof(WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4, ___BarColorMaterial_15)),static_cast<int32_t>(offsetof(WindowYellow_t72866EBB80B879AA459C762BB47BB49412BD49C4, ___ButtonsColorMaterial_16)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5117[6] = 
 {
 	static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_AnchorPrefab_4)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED_StaticFields, ___s_Hits_5)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_AnchorPoints_6)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_RaycastManager_7)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_AnchorManager_8)),static_cast<int32_t>(offsetof(AnchorCreator_tBBEE94135B5183E0A8EE52FB00513F69C7C980ED, ___m_PlaneManager_9)),};

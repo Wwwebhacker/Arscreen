@@ -82,7 +82,7 @@ public class CoreController : MonoBehaviour
     {
         if (emptyWindowPrefab.IsUnityNull()) return null;
         var newWindow = Instantiate(emptyWindowPrefab, position, rotation);
-        newWindow.transform.localScale = new Vector3(2,2,2);
+        //newWindow.transform.localScale = new Vector3(2,2,2);
         _windows.Add(newWindow);
         return newWindow;
     }

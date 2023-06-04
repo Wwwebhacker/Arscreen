@@ -112,7 +112,7 @@ public class Window : MonoBehaviour
             var midPoint = CoreController.Instance.getPinchMidPoint();
             var dir = midPoint - CoreController.Camera.transform.position;
             dir.Normalize();
-            newPos = midPoint + dir*2;
+            newPos = midPoint + dir * 0.2f;
         }
         else 
         {
