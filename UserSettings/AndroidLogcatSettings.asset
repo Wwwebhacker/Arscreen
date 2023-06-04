@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "ef1f4a34",
+    "m_SelectedDeviceId": "c508d88a",
     "m_SelectedPackage": {
-        "deviceId": "ef1f4a34",
+        "deviceId": "c508d88a",
         "name": "pl.edu.pg.arscreen",
-        "processId": 25261,
+        "processId": 31397,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -11,37 +11,7 @@
         {
             "deviceId": "ef1f4a34",
             "name": "com.android.launcher",
-            "processId": 4213,
-            "exited": false
-        },
-        {
-            "deviceId": "ef1f4a34",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 27587,
-            "exited": true
-        },
-        {
-            "deviceId": "ef1f4a34",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 28077,
-            "exited": true
-        },
-        {
-            "deviceId": "ef1f4a34",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 16114,
-            "exited": true
-        },
-        {
-            "deviceId": "ef1f4a34",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 16387,
-            "exited": true
-        },
-        {
-            "deviceId": "ef1f4a34",
-            "name": "pl.edu.pg.arscreen",
-            "processId": 25261,
+            "processId": 3769,
             "exited": false
         },
         {
@@ -225,6 +195,30 @@
             "exited": false
         },
         {
+            "deviceId": "c508d88a",
+            "name": "pl.edu.pg.arscreen",
+            "processId": 15770,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "pl.edu.pg.arscreen",
+            "processId": 13460,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "pl.edu.pg.arscreen",
+            "processId": 28824,
+            "exited": false
+        },
+        {
+            "deviceId": "c508d88a",
+            "name": "pl.edu.pg.arscreen",
+            "processId": 31397,
+            "exited": false
+        },
+        {
             "deviceId": "711KPMZ0636147",
             "name": "com.DefaultCompany.ARFOUND",
             "processId": 10925,
@@ -335,7 +329,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -351,7 +345,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "CRASH",
