@@ -1484,10 +1484,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPanelClicked: 0
-  switchAppButton: {fileID: 0}
-  appsPanel: {fileID: 0}
+  switchAppButton: {fileID: 831446851}
+  appsPanel: {fileID: 433781589}
   app: {fileID: 1882348180}
-  minimizeHandler: {fileID: 0}
+  minimizeHandler: {fileID: 653151161}
 --- !u!222 &863015791
 CanvasRenderer:
   m_ObjectHideFlags: 0
