@@ -4,6 +4,7 @@ public class InputHandler
 {
     //change this to allow using gestures!
     public static bool IsUsingGestures = true;
+
     
     public static bool Clicked()
     {
