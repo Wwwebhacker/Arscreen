@@ -107,7 +107,10 @@ public class Window : MonoBehaviour
         Vector3 newPos;
         if (InputHandler.IsUsingGestures) 
         {
-            newPos = CoreController.Instance.getPinchMidPoint();
+            var midPoint = CoreController.Instance.getPinchMidPoint();
+            var dir = midPoint - CoreController.Camera.transform.position;
+            dir.Normalize();
+            newPos = midPoint + dir*2;
         }
         else 
         {
