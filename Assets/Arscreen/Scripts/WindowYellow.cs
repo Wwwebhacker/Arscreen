@@ -6,12 +6,15 @@ using UnityEngine;
 public class WindowYellow : Window
 {
     bool attachedToWall = false;
+    private int ColorIndex = 0;
+    public Material[] ScreenColorMaterial;
+    public Material[] BarColorMaterial;
+    public Material[] ButtonsColorMaterial;
 
     new void Update()
     {
         this.CheckStandardWindowInteractions();
-        base.CheckButtons();
-        this.CheckYellowWindowButtons();
+        this.CheckButtons();
     }
 
     new protected void CheckStandardWindowInteractions()
@@ -64,7 +67,7 @@ public class WindowYellow : Window
         }
     }
 
-    private void CheckYellowWindowButtons()
+    new private void CheckButtons()
     {
         if (base.CheckConditionsForButtons() == false) return;
 
@@ -72,8 +75,30 @@ public class WindowYellow : Window
 
         switch (onAim.name)
         {
-            case "ChangeColourButton":
+            case "CloseWindowButton":
+                onDestroyButtonClick();
+                break;
+            case "MinimizeWindowButton":
+                onMinimizeButtonClick();
+                break;
+            case "HideWindowButton":
+                this.onHideButtonClick();
+                break;
+
+            case "ChangeColorButton":
                 //TODO dodac zmiane kolorow kartek
+                //Screen.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = BrushColor;
+                //Screen.GetComponent<MeshRenderer>().material.color = new Color(0.5f, 1, 0.5f);
+                //Bar.GetComponent<MeshRenderer>().material.color = Color.green;
+                //Screen.GetComponent<Renderer>().material.color = Color.green;
+                ColorIndex += 1;
+                if (ColorIndex >= 3) ColorIndex = 0;
+                Screen.GetComponent<MeshRenderer>().material = ScreenColorMaterial[ColorIndex]; //sizeofScreenColormaterial tutaj zamiast 3?
+                Bar.GetComponent<MeshRenderer>().material = BarColorMaterial[ColorIndex];
+                CloseWindowButton.GetComponent<MeshRenderer>().material = ButtonsColorMaterial[ColorIndex];
+                HideWindowButton.GetComponent<MeshRenderer>().material = ButtonsColorMaterial[ColorIndex];
+                MinimizeWindowButton.GetComponent<MeshRenderer>().material = ButtonsColorMaterial[ColorIndex];
+                transform.Find("ChangeColorButton").gameObject.GetComponent<MeshRenderer>().material = ButtonsColorMaterial[ColorIndex];
                 break;
 
             case "DetachButton":
@@ -88,6 +113,12 @@ public class WindowYellow : Window
                 break;
         }
     }
+
+    new protected void onHideButtonClick()
+    {
+        if (Screen != null) Screen.SetActive(!Screen.activeSelf);
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {

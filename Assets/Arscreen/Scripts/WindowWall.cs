@@ -21,10 +21,11 @@ public class WindowWall : Window
             case "CloseWindowButton":
                 onDestroyButtonClick();
                 break;
-
             case "MinimizeWindowButton":
-                //if (Screen != null) Screen.SetActive(!Screen.activeSelf);
                 onMinimizeButtonClick();
+                break;
+            case "HideWindowButton":
+                if (Screen != null) Screen.SetActive(!Screen.activeSelf);
                 break;
         }
     }

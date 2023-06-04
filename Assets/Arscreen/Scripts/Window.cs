@@ -17,6 +17,7 @@ public class Window : MonoBehaviour
 
     protected GameObject CloseWindowButton; //ewentualnie mozna zastapic obiektem na ktorym znajdowaly by sie przyciski
     protected GameObject MinimizeWindowButton;
+    protected GameObject HideWindowButton;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class Window : MonoBehaviour
         
         CloseWindowButton = transform.Find("CloseWindowButton").gameObject;
         MinimizeWindowButton = transform.Find("MinimizeWindowButton").gameObject;
+        HideWindowButton = transform.Find("HideWindowButton").gameObject;
     }
 
     protected void Start()
@@ -132,6 +134,7 @@ public class Window : MonoBehaviour
             element.transform.localScale -= tmp;
             element.transform.Translate(tmp / 2.0f);
         }
+        transform.Find("HideWindowButton").gameObject.transform.Translate(tmp);
     }
 
     protected void HandleRightFrame(GameObject onAim, Vector3 difference)
@@ -171,9 +174,11 @@ public class Window : MonoBehaviour
             case "CloseWindowButton":
                 onDestroyButtonClick();
                 break;
-
             case "MinimizeWindowButton":
                 onMinimizeButtonClick();
+                break;
+            case "HideWindowButton":
+                onHideButtonClick();
                 break;
         }
     }
@@ -185,13 +190,15 @@ public class Window : MonoBehaviour
 
     protected void onMinimizeButtonClick()
     {
-        /*
+        CoreController.Instance.minimizeHandler.Minimize(this);
+    }
+
+    protected void onHideButtonClick()
+    {
         if (Screen != null) Screen.SetActive(!Screen.activeSelf);
         if (FrameLeft != null) FrameLeft.SetActive(!FrameLeft.activeSelf);
         if (FrameRight != null) FrameRight.SetActive(!FrameRight.activeSelf);
         if (FrameBottom != null) FrameBottom.SetActive(!FrameBottom.activeSelf);
-        */
-        CoreController.Instance.minimizeHandler.Minimize(this);
     }
 
 
