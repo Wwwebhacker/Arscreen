@@ -109,6 +109,10 @@ public class CoreController : MonoBehaviour
         const float center = 0.5f;
         return Vector3.Lerp(thumbFinger, indexFinger, center);
     }
-    
+
+    public void ToggleUsingGestures()
+    {
+        InputHandler.IsUsingGestures = !InputHandler.IsUsingGestures;
+    }
     
 }
