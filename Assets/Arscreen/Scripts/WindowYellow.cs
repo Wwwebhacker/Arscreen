@@ -41,6 +41,10 @@ public class WindowYellow : Window
             case "FrameBottom":
                 base.HandleFrameBottom(onAim, difference);
                 break;
+                //PROBA NAPRAWY TEKSTU
+            case "Screen":
+                this.HandleScreen(onAim);
+                break;
         }
     }
 
@@ -48,12 +52,6 @@ public class WindowYellow : Window
     {
         if (attachedToWall == false)
         {
-            /*
-            var newPos = CoreController.Camera.transform.position + (CoreController.Camera.transform.forward * 1.0f);
-            var p = onAim.transform.position - transform.position;
-            transform.position = newPos - p;
-            transform.rotation = CoreController.Camera.transform.rotation;
-            */
             base.HandleBar(onAim);
         }
         else
@@ -66,6 +64,13 @@ public class WindowYellow : Window
             transform.localPosition = Vector3.right * wallCursorPosition.x + Vector3.up * (wallCursorPosition.y - walloffset.y) + Vector3.forward * transform.localPosition.z;
         }
     }
+
+    protected void HandleScreen(GameObject onAim)
+    {
+        transform.Find("KeyBoard Canvas").gameObject.SetActive(true);
+    }
+
+
 
     new private void CheckButtons()
     {
@@ -86,11 +91,6 @@ public class WindowYellow : Window
                 break;
 
             case "ChangeColorButton":
-                //TODO dodac zmiane kolorow kartek
-                //Screen.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = BrushColor;
-                //Screen.GetComponent<MeshRenderer>().material.color = new Color(0.5f, 1, 0.5f);
-                //Bar.GetComponent<MeshRenderer>().material.color = Color.green;
-                //Screen.GetComponent<Renderer>().material.color = Color.green;
                 ColorIndex += 1;
                 if (ColorIndex >= 3) ColorIndex = 0;
                 Screen.GetComponent<MeshRenderer>().material = ScreenColorMaterial[ColorIndex]; //sizeofScreenColormaterial tutaj zamiast 3?
@@ -129,7 +129,6 @@ public class WindowYellow : Window
                 CoreController.Instance.ActiveWindow.transform.SetParent(other.gameObject.transform);
                 CoreController.Instance.ActiveWindow.transform.localScale /= 2;
 
-                //Destroy(CoreController.Instance.ActiveWindow.transform.Find("Bar").gameObject);
                 attachedToWall = true;
 
                 CoreController.Instance.ActiveWindow.transform.localPosition = new Vector3(0, 0, -0.025f);
