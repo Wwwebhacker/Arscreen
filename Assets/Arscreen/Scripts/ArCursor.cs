@@ -42,11 +42,11 @@ public class ArCursor : MonoBehaviour
             ray = new Ray(CoreController.Camera.transform.position, CoreController.Camera.transform.forward);
         }
         // 
-        
+
         const float rayLength = 10.0f;
 
         // check for window hit
-        if (Physics.Raycast(ray, 
+        if (Physics.Raycast(ray,
                 out var hit, rayLength))
         {
             LastHitInfo = hit;
@@ -59,14 +59,14 @@ public class ArCursor : MonoBehaviour
                 return true;
             }
         }
-        
+
         CoreController.Instance.ActiveWindow = null;
         // check for plane hit
         // Vector2 centerOfScreen = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         raycastManager.Raycast(ray, hits, TrackableType.Planes);
         if (hits.Count == 0) return false;
-        
+
         transform.position = hits[0].pose.position;
         transform.rotation = hits[0].pose.rotation;
         return true;
